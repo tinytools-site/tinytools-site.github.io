@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Stopwatch and Countdown Timer — Free</title>
+<meta name="description" content="Free online stopwatch with lap times plus a countdown timer with sound alert. Accurate, simple, runs in your browser — no sign-up.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is the online stopwatch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Within a few milliseconds for normal use. It uses timestamps rather than counting ticks, so it doesn't drift."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the timer work in a background tab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mostly \u2014 the countdown completes and the sound plays, but the display may update late because browsers throttle hidden tabs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I record lap times?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Press Lap while the stopwatch runs; each split shows its own duration and the running total."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a sound when the countdown ends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 a chime generated in your browser. Make sure your device volume is on and the tab is allowed to play sound."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Stopwatch &amp; Countdown Timer</h1>
+  <p class="tool-lead">A precise stopwatch with lap splits, plus a countdown timer that sounds an alert when time runs out.</p>
+  <div class="tool-box">
+<div class="field"><label for="sw-mode">Mode</label>
+  <select id="sw-mode">
+    <option value="stopwatch">Stopwatch</option>
+    <option value="countdown">Countdown timer</option>
+  </select></div>
+<div id="sw-cd-inputs" style="display:none">
+  <div class="field-row">
+    <div class="field"><label for="sw-min">Minutes</label><input type="number" id="sw-min" value="5" min="0" max="999" step="1"></div>
+    <div class="field"><label for="sw-sec">Seconds</label><input type="number" id="sw-sec" value="0" min="0" max="59" step="1"></div>
+  </div>
+</div>
+<div class="timer-display" id="sw-display">00:00.00</div>
+<div class="timer-controls">
+  <button class="btn" id="sw-start">Start</button>
+  <button class="btn secondary" id="sw-lap">Lap</button>
+  <button class="btn secondary" id="sw-reset">Reset</button>
+</div>
+<div id="sw-laps" style="margin-top:16px"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>Timing, done right</h2>
+<p>A stopwatch measures elapsed time upward from zero — for workouts, experiments, cooking steps or anything you want to time. A countdown timer does the reverse: you set a duration and it alerts you at zero. This page combines both, because most timing tasks need one or the other and switching tools mid-task is annoying.</p>
+<p>Browser timers are accurate to a few milliseconds for everyday purposes. The implementation here does not count ticks — it records timestamps and computes the difference, so brief hiccups do not accumulate into drift. One honest caveat: browsers throttle timers in background tabs to save battery, so for critical timing keep the tab visible or accept roughly second-level accuracy.</p>
+<p>Lap and split times turn a stopwatch into a training tool. Runners log each kilometre split to pace races; cooks time each stage of a recipe; presenters rehearse sections against the clock. The lap list below records every split with its own duration and the running total, and you can copy the table into a training log.</p>
+<p>The countdown ends with a sound generated in your browser — no audio files needed. Set minutes and seconds, start it, and a chime plays at zero even if the tab is in the background (audio usually still fires; the display just updates when you return). For focus sessions with structured work/break intervals, the Pomodoro timer on this site is the better fit.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How accurate is the online stopwatch?</summary><p>Within a few milliseconds for normal use. It uses timestamps rather than counting ticks, so it doesn&#x27;t drift.</p></details>
+<details><summary>Does the timer work in a background tab?</summary><p>Mostly — the countdown completes and the sound plays, but the display may update late because browsers throttle hidden tabs.</p></details>
+<details><summary>Can I record lap times?</summary><p>Yes. Press Lap while the stopwatch runs; each split shows its own duration and the running total.</p></details>
+<details><summary>Is there a sound when the countdown ends?</summary><p>Yes — a chime generated in your browser. Make sure your device volume is on and the tab is allowed to play sound.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function formatMS(ms){
+  ms = Math.max(0, Math.floor(ms));
+  var cs = Math.floor(ms / 10) % 100, s = Math.floor(ms / 1000) % 60,
+      m = Math.floor(ms / 60000) % 60, h = Math.floor(ms / 3600000);
+  function p(n){ return (n < 10 ? "0" : "") + n; }
+  return (h > 0 ? h + ":" + p(m) : p(m)) + ":" + p(s) + "." + p(cs);
+}
+function cdRemaining(totalMs, elapsedMs){ return Math.max(0, totalMs - elapsedMs); }
+document.addEventListener("DOMContentLoaded", function(){
+  var modeEl = document.getElementById("sw-mode"), disp = document.getElementById("sw-display"),
+      startBtn = document.getElementById("sw-start"), lapBtn = document.getElementById("sw-lap"),
+      resetBtn = document.getElementById("sw-reset"), lapsBox = document.getElementById("sw-laps"),
+      cdInputs = document.getElementById("sw-cd-inputs");
+  var running = false, startTs = 0, acc = 0, timerId = null, laps = [], lastLap = 0;
+  function mode(){ return modeEl.value; }
+  function cdTotal(){
+    var m = parseInt(document.getElementById("sw-min").value, 10) || 0,
+        s = parseInt(document.getElementById("sw-sec").value, 10) || 0;
+    return Math.max(0, (m * 60 + s) * 1000);
+  }
+  function current(){
+    var e = acc + (running ? Date.now() - startTs : 0);
+    return mode() === "countdown" ? cdRemaining(cdTotal(), e) : e;
+  }
+  function beep(){
+    try{
+      var Ctx = window.AudioContext || window.webkitAudioContext;
+      var ctx = new Ctx();
+      var o = ctx.createOscillator(), g = ctx.createGain();
+      o.connect(g); g.connect(ctx.destination);
+      o.frequency.value = 880; o.type = "sine";
+      g.gain.setValueAtTime(0.001, ctx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.5, ctx.currentTime + 0.05);
+      g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.2);
+      o.start(); o.stop(ctx.currentTime + 1.3);
+    }catch(e){}
+  }
+  function stop(){
+    if (running){ acc += Date.now() - startTs; running = false; }
+    if (timerId){ clearInterval(timerId); timerId = null; }
+    startBtn.textContent = "Start"; render();
+  }
+  function render(){
+    disp.textContent = formatMS(current());
+    if (mode() === "countdown" && running && current() <= 0){ stop(); beep(); }
+  }
+  startBtn.addEventListener("click", function(){
+    if (running){ stop(); return; }
+    if (mode() === "countdown" && cdTotal() <= 0) return;
+    running = true; startTs = Date.now();
+    startBtn.textContent = "Pause";
+    timerId = setInterval(render, 47); render();
+  });
+  lapBtn.addEventListener("click", function(){
+    if (!running || mode() !== "stopwatch") return;
+    var e = current(), split = e - lastLap; lastLap = e;
+    laps.push({n:laps.length + 1, split:split, total:e});
+    var rows = laps.map(function(l){
+      return "<tr><td>Lap "+l.n+"</td><td>"+formatMS(l.split)+"</td><td>"+formatMS(l.total)+"</td></tr>";
+    }).join("");
+    lapsBox.innerHTML = "<table><tr><td><b>Lap</b></td><td><b>Split</b></td><td><b>Total</b></td></tr>"+rows+"</table>";
+  });
+  resetBtn.addEventListener("click", function(){
+    stop(); acc = 0; laps = []; lastLap = 0; lapsBox.innerHTML = ""; render();
+  });
+  modeEl.addEventListener("change", function(){
+    stop(); acc = 0; laps = []; lastLap = 0; lapsBox.innerHTML = "";
+    cdInputs.style.display = mode() === "countdown" ? "block" : "none";
+    lapBtn.style.display = mode() === "stopwatch" ? "" : "none";
+    render();
+  });
+  render();
+});
+</script>
+</body>
+</html>

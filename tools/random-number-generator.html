@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Number Generator and Picker — Free</title>
+<meta name="description" content="Generate random numbers in any range or pick a random winner from a list of names. Fair, instant and free — perfect for draws and decisions.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this random generator truly random?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It uses your browser's cryptographically secure random generator, which is unbiased and unpredictable \u2014 fair for draws, giveaways and games."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pick multiple winners without repeats?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The picker shuffles the list and takes winners from the top, so the same name cannot win twice unless you run it again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between unique and duplicate numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unique draws each number once (like lottery balls). Duplicates allow repeats (like dice rolls), where each draw is independent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this for a giveaway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 decide the rules first (number of winners, eligibility), paste all entries, and screenshot the result for transparency."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Random Number Generator</h1>
+  <p class="tool-lead">Generate random numbers in any range — or paste a list of names and pick a fair random winner.</p>
+  <div class="tool-box">
+<div class="field"><label for="rnd-mode">Mode</label>
+  <select id="rnd-mode">
+    <option value="numbers">Random numbers</option>
+    <option value="names">Pick from a list (names)</option>
+  </select></div>
+<div id="rnd-numbers">
+  <div class="field-row">
+    <div class="field"><label for="rnd-min">Min</label><input type="number" id="rnd-min" value="1" step="1"></div>
+    <div class="field"><label for="rnd-max">Max</label><input type="number" id="rnd-max" value="100" step="1"></div>
+  </div>
+  <div class="field-row">
+    <div class="field"><label for="rnd-count">How many</label><input type="number" id="rnd-count" value="1" min="1" max="1000" step="1"></div>
+    <div class="field"><label for="rnd-dup">Duplicates</label>
+      <select id="rnd-dup"><option value="no">No repeats</option><option value="yes">Allow repeats</option></select></div>
+  </div>
+</div>
+<div id="rnd-names" style="display:none">
+  <div class="field"><label for="rnd-list">Names (one per line)</label>
+    <textarea id="rnd-list" rows="6" placeholder="Alice&#10;Bob&#10;Carol"></textarea></div>
+  <div class="field"><label for="rnd-winners">Number of winners</label>
+    <input type="number" id="rnd-winners" value="1" min="1" step="1"></div>
+</div>
+<button class="btn" id="rnd-go">Generate</button>
+<div class="result show" id="rnd-result" style="margin-top:16px"><p style="color:#6b7280">Results appear here.</p></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>Randomness you can trust</h2>
+<p>Computers generate randomness with algorithms called pseudorandom number generators, seeded from unpredictable system events. For everyday uses — raffles, giveaways, classroom picks, game nights — this is more than fair enough. This tool goes a step further and uses your browser's cryptographically secure generator (crypto.getRandomValues), the same source of randomness behind secure web connections, so every outcome is unbiased.</p>
+<p>For number generation, each integer in your range has exactly equal probability. Generating 5 unique numbers from 1 to 50 works like drawing lottery balls without putting them back: no repeats, every combination equally likely. Allowing duplicates instead models dice rolls, where each roll is independent and repeats are expected.</p>
+<p>The name picker shuffles your list with the Fisher-Yates algorithm — the standard for unbiased shuffling — then takes winners from the top. Because the shuffle touches every position exactly once with a random choice, no name gets preferential treatment, including the first and last entries people often suspect of bias.</p>
+<p>A fair draw also needs a clean process: decide the rules before generating (how many winners, whether one person can win twice), paste the full list, and screenshot the result for transparency. For high-stakes draws, consider recording the screen. The math here is fair; documenting the process makes it visibly fair too.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>Is this random generator truly random?</summary><p>It uses your browser&#x27;s cryptographically secure random generator, which is unbiased and unpredictable — fair for draws, giveaways and games.</p></details>
+<details><summary>Can I pick multiple winners without repeats?</summary><p>Yes. The picker shuffles the list and takes winners from the top, so the same name cannot win twice unless you run it again.</p></details>
+<details><summary>What is the difference between unique and duplicate numbers?</summary><p>Unique draws each number once (like lottery balls). Duplicates allow repeats (like dice rolls), where each draw is independent.</p></details>
+<details><summary>Can I use this for a giveaway?</summary><p>Yes — decide the rules first (number of winners, eligibility), paste all entries, and screenshot the result for transparency.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function secureRand(n, randFn){
+  if (randFn) return Math.floor(randFn() * n);
+  if (typeof crypto !== "undefined" && crypto.getRandomValues){
+    var a = new Uint32Array(1), limit = Math.floor(4294967296 / n) * n, v;
+    do { crypto.getRandomValues(a); v = a[0]; } while (v >= limit);
+    return v % n;
+  }
+  return Math.floor(Math.random() * n);
+}
+function randomInts(min, max, count, allowDup, randFn){
+  min = Math.ceil(parseFloat(min)); max = Math.floor(parseFloat(max)); count = parseInt(count, 10);
+  if (isNaN(min) || isNaN(max)) return {error:"Enter a valid range."};
+  if (min > max) return {error:"Min cannot be greater than max."};
+  if (isNaN(count) || count < 1) return {error:"Count must be at least 1."};
+  var size = max - min + 1;
+  if (!allowDup && count > size) return {error:"Cannot draw "+count+" unique numbers from a range of "+size+"."};
+  var out = [], seen = {}, guard = 0;
+  while (out.length < count && guard < 100000){
+    guard++;
+    var v = min + secureRand(size, randFn);
+    if (allowDup || !seen[v]){ seen[v] = 1; out.push(v); }
+  }
+  return {values:out};
+}
+function pickWinners(names, count, randFn){
+  var list = names.map(function(s){ return s.trim(); }).filter(function(s){ return s.length > 0; });
+  if (list.length === 0) return {error:"Enter at least one name."};
+  count = parseInt(count, 10);
+  if (isNaN(count) || count < 1) return {error:"Winners must be at least 1."};
+  if (count > list.length) return {error:"More winners than names."};
+  var arr = list.slice(), i, j, t;
+  for (i = arr.length - 1; i > 0; i--){
+    j = secureRand(i + 1, randFn); t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+  }
+  return {values:arr.slice(0, count)};
+}
+function escHtml(s){
+  return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var modeEl = document.getElementById("rnd-mode"),
+      numBox = document.getElementById("rnd-numbers"), nameBox = document.getElementById("rnd-names"),
+      out = document.getElementById("rnd-result");
+  function show(r){
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; return; }
+    out.innerHTML = '<div class="big" style="font-size:1.3rem;word-break:break-word">'+
+      r.values.map(escHtml).join(", ")+"</div>";
+  }
+  modeEl.addEventListener("change", function(){
+    var names = modeEl.value === "names";
+    numBox.style.display = names ? "none" : "block";
+    nameBox.style.display = names ? "block" : "none";
+  });
+  document.getElementById("rnd-go").addEventListener("click", function(){
+    if (modeEl.value === "names"){
+      show(pickWinners(document.getElementById("rnd-list").value.split("\n"),
+                       document.getElementById("rnd-winners").value));
+    } else {
+      show(randomInts(document.getElementById("rnd-min").value,
+                      document.getElementById("rnd-max").value,
+                      document.getElementById("rnd-count").value,
+                      document.getElementById("rnd-dup").value === "yes"));
+    }
+  });
+});
+</script>
+</body>
+</html>

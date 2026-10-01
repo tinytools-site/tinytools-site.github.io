@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuel Cost Calculator — Trip Gas Cost Estimator</title>
+<meta name="description" content="Estimate fuel costs for any trip. Enter distance, fuel efficiency and gas price to see total cost, fuel needed and cost per person. Free.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate fuel cost for a trip?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide distance by fuel efficiency to get fuel used, then multiply by price per unit. (300 mi / 30 mpg) x $3.50 = $35."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I find my car's real mpg?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fill up, reset the trip meter, drive normally, refill, then divide miles driven by gallons added. Repeat and average."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between mpg and L/100km?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "mpg is distance per fuel (higher is better); L/100km is fuel per distance (lower is better). 30 mpg is about 7.8 L/100km."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator include tolls and parking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No \u2014 fuel only. Add tolls, parking and food separately for the full trip budget."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Fuel Cost Calculator</h1>
+  <p class="tool-lead">Estimate any trip&#x27;s fuel cost — distance, your vehicle&#x27;s efficiency and the current fuel price, with cost-splitting.</p>
+  <div class="tool-box">
+<div class="field-row">
+  <div class="field"><label for="fuel-dist">Distance</label>
+    <input type="number" id="fuel-dist" value="300" min="0" step="any"></div>
+  <div class="field"><label for="fuel-dunit">Distance unit</label>
+    <select id="fuel-dunit"><option value="mi">Miles</option><option value="km">Kilometres</option></select></div>
+</div>
+<div class="field-row">
+  <div class="field"><label for="fuel-eff">Fuel efficiency</label>
+    <input type="number" id="fuel-eff" value="30" min="0.1" step="any"></div>
+  <div class="field"><label for="fuel-eunit">Efficiency unit</label>
+    <select id="fuel-eunit"><option value="mpg">mpg</option><option value="l100">L/100km</option></select></div>
+</div>
+<div class="field-row">
+  <div class="field"><label for="fuel-price">Fuel price</label>
+    <input type="number" id="fuel-price" value="3.5" min="0" step="any"></div>
+  <div class="field"><label for="fuel-punit">Price per</label>
+    <select id="fuel-punit"><option value="gal">Gallon ($)</option><option value="litre">Litre ($)</option></select></div>
+</div>
+<div class="field"><label for="fuel-ppl">Split between (people)</label>
+  <input type="number" id="fuel-ppl" value="1" min="1" step="1"></div>
+<div class="result show" id="fuel-result" style="margin-top:16px"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How trip fuel cost is estimated</h2>
+<p>The math is straightforward: divide the trip distance by your vehicle's fuel efficiency to get fuel used, then multiply by the price per unit. A 300-mile trip in a car that does 30 mpg uses 10 gallons; at $3.50 a gallon the trip costs $35. Metric works the same way: litres per 100 km converts directly — 100 km at 7 L/100 km uses 7 litres.</p>
+<p>Your real efficiency is the number that matters most, and it is rarely the sticker figure. City driving, air conditioning, roof boxes, underinflated tyres and aggressive acceleration all push consumption up 10 to 30 percent. The honest way to find yours: fill the tank, reset the trip meter, drive normally, refill, and divide miles driven by gallons added. Do it twice and average.</p>
+<p>Fuel price swings change trip budgets fast. At 25 mpg, a 500-mile trip costs $60 at $3/gallon but $100 at $5/gallon — the same drive, two-thirds more expensive. If you are deciding between driving and flying, compare the full driving cost (fuel plus tolls, parking and wear) against the flight plus airport transport, not fuel alone.</p>
+<p>Splitting with passengers is where this calculator earns its keep: enter the headcount and everyone sees their share instantly, ending the awkward guesswork. Note it covers fuel only — tolls, parking and food are separate. For electric vehicles, the same logic applies with kWh per 100 km and your electricity rate instead of gallons and gas price.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How do I calculate fuel cost for a trip?</summary><p>Divide distance by fuel efficiency to get fuel used, then multiply by price per unit. (300 mi / 30 mpg) x $3.50 = $35.</p></details>
+<details><summary>How can I find my car&#x27;s real mpg?</summary><p>Fill up, reset the trip meter, drive normally, refill, then divide miles driven by gallons added. Repeat and average.</p></details>
+<details><summary>What is the difference between mpg and L/100km?</summary><p>mpg is distance per fuel (higher is better); L/100km is fuel per distance (lower is better). 30 mpg is about 7.8 L/100km.</p></details>
+<details><summary>Does the calculator include tolls and parking?</summary><p>No — fuel only. Add tolls, parking and food separately for the full trip budget.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function fuelCalc(dist, dunit, eff, eunit, price, punit, people){
+  dist = parseFloat(dist); eff = parseFloat(eff); price = parseFloat(price);
+  people = parseInt(people, 10);
+  if (isNaN(dist) || dist < 0) return {error:"Enter a valid distance."};
+  if (isNaN(eff) || eff <= 0) return {error:"Enter a valid fuel efficiency."};
+  if (isNaN(price) || price < 0) return {error:"Enter a valid fuel price."};
+  if (isNaN(people) || people < 1) people = 1;
+  var miles = dunit === "mi" ? dist : dist / 1.609344;
+  var gallons;
+  if (eunit === "mpg"){ gallons = miles / eff; }
+  else { var litres = miles * 1.609344 * eff / 100; gallons = litres / 3.78541; }
+  var pricePerGal = punit === "gal" ? price : price * 3.78541;
+  var cost = gallons * pricePerGal;
+  function money(x){ return "$" + x.toFixed(2); }
+  var fuelStr = (Math.round(gallons * 100) / 100) + " gal";
+  return {gallons:gallons, cost:cost, per:cost / people,
+          fuelS:fuelStr, costS:money(cost), perS:money(cost / people), people:people};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var ids = ["fuel-dist","fuel-dunit","fuel-eff","fuel-eunit","fuel-price","fuel-punit","fuel-ppl"],
+      els = ids.map(function(id){ return document.getElementById(id); }),
+      out = document.getElementById("fuel-result");
+  function go(){
+    var r = fuelCalc(els[0].value, els[1].value, els[2].value, els[3].value, els[4].value, els[5].value, els[6].value);
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; return; }
+    var rows = "<tr><td>Fuel needed</td><td>"+r.fuelS+"</td></tr>"+
+      "<tr><td>Total fuel cost</td><td>"+r.costS+"</td></tr>";
+    if (r.people > 1) rows += "<tr><td>Each of "+r.people+" pays</td><td>"+r.perS+"</td></tr>";
+    out.innerHTML = '<div class="big">'+r.costS+'</div><table>'+rows+'</table>';
+  }
+  els.forEach(function(el){ el.addEventListener("input", go); el.addEventListener("change", go); });
+  go();
+});
+</script>
+</body>
+</html>

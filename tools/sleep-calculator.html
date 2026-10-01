@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sleep Calculator — Best Bedtime and Wake Times</title>
+<meta name="description" content="Find the best time to fall asleep or wake up using 90-minute sleep cycles. Wake up refreshed instead of groggy. Free online tool.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why 90-minute sleep cycles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sleep research shows the average full cycle \u2014 light, deep and REM sleep \u2014 lasts about 90 minutes. Waking between cycles avoids grogginess."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many sleep cycles do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most adults need 5\u20136 cycles (7.5\u20139 hours). Teenagers and some adults do well on slightly more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator account for falling asleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 it adds 15 minutes, the average sleep-onset time. If you take longer, go to bed proportionally earlier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is waking up mid-cycle really that bad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It causes sleep inertia \u2014 grogginess that can last 30+ minutes. Waking at a cycle boundary feels much easier."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Sleep Cycle Calculator</h1>
+  <p class="tool-lead">Time your sleep around 90-minute cycles — get ideal bedtimes for your alarm, or ideal wake times if you sleep now.</p>
+  <div class="tool-box">
+<div class="field"><label for="sleep-mode">I want to...</label>
+  <select id="sleep-mode">
+    <option value="wake">Wake up at a set time → find bedtimes</option>
+    <option value="now">Fall asleep now → find wake-up times</option>
+  </select></div>
+<div class="field" id="sleep-time-wrap"><label for="sleep-time">I need to wake up at</label>
+  <input type="time" id="sleep-time" value="06:30"></div>
+<button class="btn" id="sleep-go">Calculate</button>
+<div class="result show" id="sleep-result" style="margin-top:16px"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>Why sleep cycles matter</h2>
+<p>Sleep is not uniform: it runs in cycles of roughly 90 minutes, moving from light sleep through deep sleep into REM (dream) sleep and back. Waking up in the middle of deep sleep is what causes that groggy, disoriented feeling — sleep inertia — while waking at the end of a cycle, during light sleep, feels dramatically easier even with the same total hours.</p>
+<p>Most adults need 5 to 6 full cycles, which is 7.5 to 9 hours of actual sleep. This calculator works backwards from your alarm: it subtracts multiples of 90 minutes and adds about 15 minutes for the average time it takes to fall asleep. If you must wake at 6:30, the ideal bedtimes land around 9:15 PM (6 cycles), 10:45 PM (5 cycles) or 12:15 AM (4 cycles) — pick the earliest you can realistically manage.</p>
+<p>The reverse mode answers the common I-am-going-to-bed-now scenario: it adds cycles forward from the current time so you can set an alarm that lands between cycles instead of inside one. Both directions assume the 15-minute wind-down; if you typically toss and turn longer, shift the suggestions earlier by the difference.</p>
+<p>Cycles are averages, not medical precision — real cycles range from 80 to 120 minutes and vary by person and night. Use the calculator as a guide, then pay attention to how you actually feel. Consistent timing matters as much as duration: going to bed and waking at the same times daily trains your body to complete clean cycles on schedule.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>Why 90-minute sleep cycles?</summary><p>Sleep research shows the average full cycle — light, deep and REM sleep — lasts about 90 minutes. Waking between cycles avoids grogginess.</p></details>
+<details><summary>How many sleep cycles do I need?</summary><p>Most adults need 5–6 cycles (7.5–9 hours). Teenagers and some adults do well on slightly more.</p></details>
+<details><summary>Does the calculator account for falling asleep?</summary><p>Yes — it adds 15 minutes, the average sleep-onset time. If you take longer, go to bed proportionally earlier.</p></details>
+<details><summary>Is waking up mid-cycle really that bad?</summary><p>It causes sleep inertia — grogginess that can last 30+ minutes. Waking at a cycle boundary feels much easier.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function sleepTimes(mode, wakeStr, nowDate){
+  var CYCLE = 90, FALL_ASLEEP = 15;
+  var now = nowDate ? new Date(nowDate) : new Date();
+  function fmt(d){
+    var h = d.getHours(), m = d.getMinutes(), ap = h >= 12 ? "PM" : "AM";
+    h = h % 12; if (h === 0) h = 12;
+    return h + ":" + (m < 10 ? "0" : "") + m + " " + ap;
+  }
+  var base, out = [], k;
+  if (mode === "wake"){
+    var parts = (wakeStr || "").split(":");
+    if (parts.length !== 2 || parts[0] === "" || parts[1] === "" || isNaN(+parts[0]) || isNaN(+parts[1]))
+      return {error:"Enter a valid wake-up time."};
+    base = new Date(now);
+    base.setHours(parseInt(parts[0], 10), parseInt(parts[1], 10), 0, 0);
+    if (base <= now) base.setDate(base.getDate() + 1);
+    for (k = 6; k >= 3; k--){
+      var t = new Date(base.getTime() - (k * CYCLE + FALL_ASLEEP) * 60000);
+      out.push({cycles:k, time:fmt(t), hours:(k * 1.5).toFixed(1)});
+    }
+    return {dir:"bed", times:out};
+  }
+  base = now;
+  for (k = 6; k >= 3; k--){
+    var w = new Date(base.getTime() + (FALL_ASLEEP + k * CYCLE) * 60000);
+    out.push({cycles:k, time:fmt(w), hours:(k * 1.5).toFixed(1)});
+  }
+  return {dir:"wake", times:out};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var modeEl = document.getElementById("sleep-mode"), tEl = document.getElementById("sleep-time"),
+      tWrap = document.getElementById("sleep-time-wrap"), out = document.getElementById("sleep-result");
+  modeEl.addEventListener("change", function(){
+    tWrap.style.display = modeEl.value === "wake" ? "block" : "none";
+  });
+  document.getElementById("sleep-go").addEventListener("click", function(){
+    var r = sleepTimes(modeEl.value, tEl.value);
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; return; }
+    var head = r.dir === "bed" ? "Go to bed at one of these times:" : "Set your alarm for one of these times:";
+    var rows = r.times.map(function(x){
+      return "<tr><td>"+x.time+"</td><td>"+x.cycles+" cycles ("+x.hours+" h)</td></tr>";
+    }).join("");
+    out.innerHTML = "<p><b>"+head+"</b></p><table>"+rows+"</table>"+
+      '<p style="font-size:.85rem;color:#6b7280;margin-top:8px">Includes ~15 min to fall asleep. Earlier = more cycles.</p>';
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discount Calculator — Sale Price and Savings</title>
+<meta name="description" content="Calculate sale prices and savings in seconds. Enter the original price and discount percent, including stacked discounts. Free online tool.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate a discount price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the original price by (1 - discount / 100). A $80 item at 25% off costs $80 x 0.75 = $60."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do stacked discounts add up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No \u2014 they multiply. 20% off followed by 10% off gives 28% total savings (0.8 x 0.9 = 0.72), not 30%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the final price after two discounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Apply each discount to the running price in turn. Enter both percentages in the calculator above to see the result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do stores show was/now prices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The original price anchors your expectations, making the discount feel larger. Always compare the final price to the usual street price."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Discount Calculator</h1>
+  <p class="tool-lead">Find the sale price and exactly how much you save — including stacked or repeated discounts.</p>
+  <div class="tool-box">
+<div class="field"><label for="disc-price">Original price ($)</label>
+  <input type="number" id="disc-price" value="120" min="0" step="any"></div>
+<div class="field-row">
+  <div class="field"><label for="disc-d1">Discount (%)</label>
+    <input type="number" id="disc-d1" value="25" min="0" max="100" step="any"></div>
+  <div class="field"><label for="disc-d2">Extra discount (%) <span style="color:#6b7280;font-weight:400">optional</span></label>
+    <input type="number" id="disc-d2" value="0" min="0" max="100" step="any"></div>
+</div>
+<div class="result show" id="disc-result"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How discounts really work</h2>
+<p>A single discount is simple: multiply the price by the discount rate to get the savings, then subtract. A $120 jacket at 25 percent off saves $30, so you pay $90. The formula is final price = original price x (1 - discount / 100). This calculator applies it instantly and shows both the price you pay and the money you keep.</p>
+<p>Stacked discounts trip people up. When a store offers an extra 10 percent off an already discounted price, the discounts multiply rather than add. A $100 item at 20 percent off, then 10 percent off the $80 sale price, costs $72 — a total saving of 28 percent, not 30 percent. Retailers know that 20% + 10% sounds bigger than 28% off, which is exactly why they phrase it that way.</p>
+<p>Sale signs use a few other tricks worth knowing. Was/now pricing anchors you to the original price even when nobody paid it for months. Percentage discounts look bigger on expensive items while fixed-amount discounts ($20 off) look bigger on cheap ones — compare the final price, not the framing. And buy-one-get-one-half-off is just 25 percent off two items, not 50 percent off.</p>
+<p>To judge whether a deal is genuinely good, compare the final price against the item's usual street price rather than the claimed was price. Price-tracking tools and a quick search reveal whether that 40 percent off is real or inflated. This calculator gives you the exact numbers; a thirty-second comparison tells you whether they are actually a bargain.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How do I calculate a discount price?</summary><p>Multiply the original price by (1 - discount / 100). A $80 item at 25% off costs $80 x 0.75 = $60.</p></details>
+<details><summary>Do stacked discounts add up?</summary><p>No — they multiply. 20% off followed by 10% off gives 28% total savings (0.8 x 0.9 = 0.72), not 30%.</p></details>
+<details><summary>What is the final price after two discounts?</summary><p>Apply each discount to the running price in turn. Enter both percentages in the calculator above to see the result.</p></details>
+<details><summary>Why do stores show was/now prices?</summary><p>The original price anchors your expectations, making the discount feel larger. Always compare the final price to the usual street price.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function discountCalc(price, d1, d2){
+  price = parseFloat(price); d1 = parseFloat(d1) || 0; d2 = parseFloat(d2) || 0;
+  if (isNaN(price) || price < 0) return {error:"Please enter a valid price."};
+  if (d1 < 0 || d1 > 100 || d2 < 0 || d2 > 100) return {error:"Discounts must be between 0 and 100."};
+  var final = price * (1 - d1/100) * (1 - d2/100);
+  var saved = price - final;
+  var eff = price > 0 ? saved / price * 100 : 0;
+  function money(x){ return "$" + x.toFixed(2); }
+  return {final:final, saved:saved, eff:eff,
+          finalS:money(final), savedS:money(saved), effS:eff.toFixed(1) + "%"};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var pEl = document.getElementById("disc-price"), d1El = document.getElementById("disc-d1"),
+      d2El = document.getElementById("disc-d2"), out = document.getElementById("disc-result");
+  function go(){
+    var r = discountCalc(pEl.value, d1El.value, d2El.value);
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; return; }
+    out.innerHTML = '<div class="big">'+r.finalS+'</div><table>'+
+      '<tr><td>You save</td><td>'+r.savedS+'</td></tr>'+
+      '<tr><td>Effective discount</td><td>'+r.effS+'</td></tr></table>';
+  }
+  [pEl, d1El, d2El].forEach(function(el){ el.addEventListener("input", go); });
+  go();
+});
+</script>
+</body>
+</html>

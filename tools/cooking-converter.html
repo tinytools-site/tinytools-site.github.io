@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cooking Converter — Cups to Grams, Tbsp and Ounces</title>
+<meta name="description" content="Convert cooking measurements: cups, tablespoons, milliliters, ounces and grams with ingredient-aware conversions for flour, sugar and more. Free.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many grams are in a cup of flour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 125 g for all-purpose flour, spooned and levelled. It varies with packing, which is why weighing is more accurate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many tablespoons are in a cup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "16 tablespoons (US). Also 48 teaspoons or 236.6 millilitres."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do cups convert to different gram weights?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because ingredients have different densities \u2014 a cup of honey (~340 g) weighs nearly 3x a cup of flour (~125 g)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I measure flour by weight or volume?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By weight. Scooping packs flour unpredictably; 125 g on a scale is exact every time."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Cooking Measurement Converter</h1>
+  <p class="tool-lead">Convert cups, spoons, milliliters and ounces — with smart gram conversions for flour, sugar, butter and more.</p>
+  <div class="tool-box">
+<div class="field"><label for="cook-ing">Ingredient</label>
+  <select id="cook-ing"></select></div>
+<div class="field"><label for="cook-amt">Amount</label>
+  <input type="number" id="cook-amt" value="1" min="0" step="any"></div>
+<div class="field-row">
+  <div class="field"><label for="cook-from">From</label><select id="cook-from"></select></div>
+  <div class="field"><label for="cook-to">To</label><select id="cook-to"></select></div>
+</div>
+<div class="result show" id="cook-result" style="margin-top:16px"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>Why cooking conversions need ingredients</h2>
+<p>Volume-to-volume conversions are fixed: 1 cup is 16 tablespoons, 48 teaspoons, 236.6 millilitres or 8 fluid ounces, everywhere, every time. The trouble starts when recipes cross between volume and weight. A cup of flour weighs about 125 grams while a cup of honey weighs about 340 — same cup, nearly triple the weight. Any converter that turns cups into grams without asking what ingredient is guessing.</p>
+<p>This converter uses standard densities for common ingredients: all-purpose flour 125 g/cup, granulated sugar 200 g/cup, butter 227 g/cup, water and milk about 237–245 g/cup, honey 340 g/cup, rice 185 g/cup and rolled oats 90 g/cup. Pick your ingredient and the volume-to-weight conversions use the right density.</p>
+<p>Weighing beats scooping for accuracy. A cup of flour can vary from 100 to 150 grams depending on how packed it is — a 50 percent swing that ruins delicate baking. A cheap kitchen scale removes the variance entirely, which is why professional bakers work in grams. When a recipe gives both, always trust the weight.</p>
+<p>Watch out for US versus metric cups: a US cup is 236.6 ml while a metric cup (used in Australia and many Commonwealth recipes) is 250 ml — a 6 percent difference that matters in baking. Tablespoons differ too: 14.8 ml in the US versus 20 ml in Australia. This converter uses US customary units; if your recipe is Australian or British, check which cup it means first.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How many grams are in a cup of flour?</summary><p>About 125 g for all-purpose flour, spooned and levelled. It varies with packing, which is why weighing is more accurate.</p></details>
+<details><summary>How many tablespoons are in a cup?</summary><p>16 tablespoons (US). Also 48 teaspoons or 236.6 millilitres.</p></details>
+<details><summary>Why do cups convert to different gram weights?</summary><p>Because ingredients have different densities — a cup of honey (~340 g) weighs nearly 3x a cup of flour (~125 g).</p></details>
+<details><summary>Should I measure flour by weight or volume?</summary><p>By weight. Scooping packs flour unpredictably; 125 g on a scale is exact every time.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+var COOK_DENSITY = {
+  "All-purpose flour":125, "Granulated sugar":200, "Brown sugar (packed)":220,
+  "Butter":227, "Water":236.6, "Milk":245, "Honey":340, "Vegetable oil":218,
+  "Rice (uncooked)":185, "Rolled oats":90, "Cocoa powder":100, "Salt (table)":273
+};
+var COOK_VOL = {cup:236.588, tbsp:14.7868, tsp:4.92892, floz:29.5735, ml:1, l:1000};
+var COOK_VOL_NAMES = {cup:"Cups", tbsp:"Tablespoons", tsp:"Teaspoons", floz:"Fluid ounces", ml:"Millilitres", l:"Litres"};
+var COOK_WT = {g:1, oz:28.3495, lb:453.592};
+var COOK_WT_NAMES = {g:"Grams", oz:"Ounces", lb:"Pounds"};
+function cookingConvert(ing, amt, from, to){
+  amt = parseFloat(amt);
+  if (isNaN(amt) || amt < 0) return {error:"Enter a valid amount."};
+  if (!(from in COOK_VOL) && !(from in COOK_WT)) return {error:"Unknown unit."};
+  if (!(to in COOK_VOL) && !(to in COOK_WT)) return {error:"Unknown unit."};
+  var density = COOK_DENSITY[ing] || 236.6;
+  function toGrams(a, u){
+    if (u in COOK_WT) return a * COOK_WT[u];
+    return a * COOK_VOL[u] / 236.588 * density;
+  }
+  function fromGrams(g, u){
+    if (u in COOK_WT) return g / COOK_WT[u];
+    return g / density * 236.588 / COOK_VOL[u];
+  }
+  var g = toGrams(amt, from), out = Math.round(fromGrams(g, to) * 1000) / 1000;
+  var names = {}, k;
+  for (k in COOK_VOL_NAMES) names[k] = COOK_VOL_NAMES[k];
+  for (k in COOK_WT_NAMES) names[k] = COOK_WT_NAMES[k];
+  return {value:out, fromName:names[from], toName:names[to]};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var ingEl = document.getElementById("cook-ing"), amtEl = document.getElementById("cook-amt"),
+      fromEl = document.getElementById("cook-from"), toEl = document.getElementById("cook-to"),
+      out = document.getElementById("cook-result");
+  Object.keys(COOK_DENSITY).forEach(function(k){
+    var o = document.createElement("option"); o.textContent = k; ingEl.appendChild(o);
+  });
+  var units = [];
+  Object.keys(COOK_VOL_NAMES).forEach(function(k){ units.push([k, COOK_VOL_NAMES[k]]); });
+  Object.keys(COOK_WT_NAMES).forEach(function(k){ units.push([k, COOK_WT_NAMES[k]]); });
+  [fromEl, toEl].forEach(function(sel){
+    units.forEach(function(u){
+      var o = document.createElement("option"); o.value = u[0]; o.textContent = u[1]; sel.appendChild(o);
+    });
+  });
+  toEl.value = "g";
+  function go(){
+    var r = cookingConvert(ingEl.value, amtEl.value, fromEl.value, toEl.value);
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; return; }
+    out.innerHTML = '<div class="big">'+amtEl.value+" "+r.fromName+" =<br>"+
+      r.value.toLocaleString("en-US")+" "+r.toName+"</div>"+
+      '<p style="font-size:.85rem;color:#6b7280;margin-top:8px">Density: '+COOK_DENSITY[ingEl.value]+' g per US cup.</p>';
+  }
+  [ingEl, amtEl, fromEl, toEl].forEach(function(el){
+    el.addEventListener("input", go); el.addEventListener("change", go);
+  });
+  go();
+});
+</script>
+</body>
+</html>

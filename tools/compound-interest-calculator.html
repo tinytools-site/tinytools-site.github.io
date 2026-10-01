@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compound Interest Calculator — Free Savings Growth Tool</title>
+<meta name="description" content="See how savings grow with compound interest. Enter your deposit, rate, time and monthly contributions to project your future balance. Free.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the compound interest formula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A = P(1 + r/n)^(nt): principal times one plus the periodic rate, raised to the number of compounding periods. Monthly contributions add a second growing term."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Rule of 72?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide 72 by the annual rate to estimate doubling time in years. At 6%, money doubles in about 12 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does compounding frequency matter much?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Somewhat \u2014 monthly compounding beats annual compounding slightly at the same nominal rate. The rate and time horizon matter far more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this account for inflation or taxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Results are nominal and pre-tax. Real purchasing power will be lower after inflation, and investment gains may be taxed."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Compound Interest Calculator</h1>
+  <p class="tool-lead">Project how your money grows — initial deposit, interest rate, compounding frequency and regular contributions.</p>
+  <div class="tool-box">
+<div class="field-row">
+  <div class="field"><label for="ci-p">Initial deposit ($)</label>
+    <input type="number" id="ci-p" value="10000" min="0" step="any"></div>
+  <div class="field"><label for="ci-pmt">Monthly contribution ($)</label>
+    <input type="number" id="ci-pmt" value="200" min="0" step="any"></div>
+</div>
+<div class="field-row">
+  <div class="field"><label for="ci-r">Annual interest rate (%)</label>
+    <input type="number" id="ci-r" value="7" min="0" step="any"></div>
+  <div class="field"><label for="ci-y">Years</label>
+    <input type="number" id="ci-y" value="30" min="1" max="100" step="1"></div>
+</div>
+<div class="field"><label for="ci-f">Compounding frequency</label>
+  <select id="ci-f">
+    <option value="12" selected>Monthly</option>
+    <option value="4">Quarterly</option>
+    <option value="1">Annually</option>
+  </select></div>
+<div class="result show" id="ci-result"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>The power of compound interest</h2>
+<p>Compound interest means earning interest on your interest. In year one, a $10,000 deposit at 7 percent earns $700. In year two you earn 7 percent on $10,700, which is $749 — and the snowball keeps accelerating. Over 30 years that single $10,000 deposit grows to about $81,000 without you adding another cent. The formula is A = P(1 + r/n)^(nt), where n is how often interest compounds each year.</p>
+<p>Time matters more than the interest rate. Starting ten years earlier beats earning a higher rate later, because compounding needs years to work its magic. This is why financial advisers repeat the same advice: start early, even with small amounts. A 25-year-old investing $200 a month at 7 percent has about $525,000 at 65; waiting until 35 cuts that to roughly $245,000 — less than half, for missing only the first decade.</p>
+<p>Regular contributions supercharge the effect. Adding $200 a month to that $10,000 deposit at 7 percent turns the 30-year result from about $81,000 into roughly $325,000. The contributions themselves total $82,000, so compounding contributed about $243,000 of pure growth. Consistency beats timing: automatic monthly transfers remove willpower from the equation.</p>
+<p>The Rule of 72 gives a quick mental estimate: divide 72 by your interest rate to get the years needed to double your money. At 7 percent, money doubles roughly every 10.3 years; at 4 percent, every 18 years. This calculator does the exact math with your compounding frequency, but the rule is handy for sanity-checking any projection in seconds.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>What is the compound interest formula?</summary><p>A = P(1 + r/n)^(nt): principal times one plus the periodic rate, raised to the number of compounding periods. Monthly contributions add a second growing term.</p></details>
+<details><summary>What is the Rule of 72?</summary><p>Divide 72 by the annual rate to estimate doubling time in years. At 6%, money doubles in about 12 years.</p></details>
+<details><summary>Does compounding frequency matter much?</summary><p>Somewhat — monthly compounding beats annual compounding slightly at the same nominal rate. The rate and time horizon matter far more.</p></details>
+<details><summary>Does this account for inflation or taxes?</summary><p>No. Results are nominal and pre-tax. Real purchasing power will be lower after inflation, and investment gains may be taxed.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function compoundCalc(P, pmt, rate, years, freq){
+  P = parseFloat(P) || 0; pmt = parseFloat(pmt) || 0;
+  rate = parseFloat(rate); years = parseInt(years, 10); freq = parseInt(freq, 10);
+  if (P < 0 || pmt < 0) return {error:"Amounts cannot be negative."};
+  if (isNaN(rate) || rate < 0) return {error:"Please enter a valid interest rate."};
+  if (isNaN(years) || years < 1 || years > 100) return {error:"Years must be between 1 and 100."};
+  var r = rate / 100;
+  var monthlyRate = Math.pow(1 + r / freq, freq / 12) - 1;
+  var months = years * 12, bal = P, i;
+  for (i = 0; i < months; i++){ bal = bal * (1 + monthlyRate) + pmt; }
+  var contributed = P + pmt * months, interest = bal - contributed;
+  function money(x){ return "$" + Math.round(x).toLocaleString("en-US"); }
+  return {balance:bal, contributed:contributed, interest:interest,
+          balanceS:money(bal), contributedS:money(contributed), interestS:money(interest)};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var ids = ["ci-p","ci-pmt","ci-r","ci-y","ci-f"],
+      els = ids.map(function(id){ return document.getElementById(id); }),
+      out = document.getElementById("ci-result");
+  function go(){
+    var r = compoundCalc(els[0].value, els[1].value, els[2].value, els[3].value, els[4].value);
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; return; }
+    out.innerHTML = '<div class="big">'+r.balanceS+'</div><table>'+
+      '<tr><td>Total contributions</td><td>'+r.contributedS+'</td></tr>'+
+      '<tr><td>Interest earned</td><td>'+r.interestS+'</td></tr></table>'+
+      '<p style="font-size:.85rem;color:#6b7280;margin-top:8px">Nominal pre-tax projection. Not financial advice.</p>';
+  }
+  els.forEach(function(el){ el.addEventListener("input", go); el.addEventListener("change", go); });
+  go();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPA Calculator — Free 4.0 Scale Grade Tool</title>
+<meta name="description" content="Calculate your GPA on the standard 4.0 scale. Add courses with letter grades and credit hours to get your semester GPA instantly. Free.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is GPA calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply each grade's point value by the course's credit hours, sum those products, and divide by total credit hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally 3.0+ is solid, 3.5+ is strong for graduate school and competitive jobs. Context and major matter too."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between weighted and unweighted GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unweighted caps at 4.0. Weighted adds bonus points (often +0.5/+1.0) for honors/AP courses, so it can exceed 4.0."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do plus and minus grades affect GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At most schools, yes: e.g. B+ = 3.3, B = 3.0, B- = 2.7. Some schools use flat letter grades without them."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>GPA Calculator</h1>
+  <p class="tool-lead">Add your courses with grades and credit hours — get your GPA on the standard 4.0 scale instantly.</p>
+  <div class="tool-box">
+<div id="gpa-rows"></div>
+<button class="btn secondary" id="gpa-add" type="button">+ Add course</button>
+<div class="result show" id="gpa-result" style="margin-top:16px"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How GPA works on the 4.0 scale</h2>
+<p>Grade Point Average condenses your grades into a single number between 0.0 and 4.0. Each letter grade maps to grade points — typically A = 4.0, B = 3.0, C = 2.0, D = 1.0, F = 0, with plus/minus variants in between (B+ = 3.3, B- = 2.7). Your GPA is the credit-weighted average: multiply each course's points by its credit hours, add them up, and divide by total credits. A 4-credit A counts twice as much as a 2-credit A.</p>
+<p>Credit weighting is why GPA math surprises people. An A in a 1-credit lab barely moves the needle, while a C in a 4-credit core course drags hard. If your GPA is below target, the fastest fix is protecting grades in high-credit courses — and, counterintuitively, a B in a 4-credit class helps more than an A in a 1-credit one when you are trying to climb.</p>
+<p>Most US colleges use the unweighted 4.0 scale above, where an A is 4.0 no matter how hard the course was. Many high schools use a weighted scale that adds 0.5 or 1.0 points for honors and AP classes, which is why you see GPAs above 4.0 on transcripts. This calculator uses the standard unweighted 4.0 scale — if your school weights advanced courses, add the bonus points to those grades first.</p>
+<p>For cumulative GPA across semesters, the same formula applies to all courses ever taken: total grade points divided by total credits attempted. Retaken courses follow your school's policy — some replace the old grade, others average both attempts. When in doubt, ask your registrar which policy applies before planning around a retake.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How is GPA calculated?</summary><p>Multiply each grade&#x27;s point value by the course&#x27;s credit hours, sum those products, and divide by total credit hours.</p></details>
+<details><summary>What is a good GPA?</summary><p>Generally 3.0+ is solid, 3.5+ is strong for graduate school and competitive jobs. Context and major matter too.</p></details>
+<details><summary>What is the difference between weighted and unweighted GPA?</summary><p>Unweighted caps at 4.0. Weighted adds bonus points (often +0.5/+1.0) for honors/AP courses, so it can exceed 4.0.</p></details>
+<details><summary>Do plus and minus grades affect GPA?</summary><p>At most schools, yes: e.g. B+ = 3.3, B = 3.0, B- = 2.7. Some schools use flat letter grades without them.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+var GPA_POINTS = {"A+":4.0,"A":4.0,"A-":3.7,"B+":3.3,"B":3.0,"B-":2.7,"C+":2.3,"C":2.0,"C-":1.7,"D+":1.3,"D":1.0,"D-":0.7,"F":0};
+function gpaCalc(courses){
+  var pts = 0, creds = 0, i;
+  for (i = 0; i < courses.length; i++){
+    var g = courses[i].grade, c = parseFloat(courses[i].credits);
+    if (!(g in GPA_POINTS) || isNaN(c) || c <= 0) continue;
+    pts += GPA_POINTS[g] * c; creds += c;
+  }
+  if (creds === 0) return {error:"Add at least one course with valid credits."};
+  var gpa = pts / creds;
+  return {gpa:gpa, gpaS:(Math.round(gpa*100)/100).toFixed(2), credits:creds, points:Math.round(pts*100)/100};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var wrap = document.getElementById("gpa-rows"), out = document.getElementById("gpa-result");
+  var grades = Object.keys(GPA_POINTS);
+  function row(){
+    var d = document.createElement("div");
+    d.className = "field-row"; d.style.marginBottom = "10px";
+    var opts = grades.map(function(g){ return '<option'+(g==="A"?" selected":"")+'>'+g+'</option>'; }).join("");
+    d.innerHTML = '<div class="field" style="margin:0"><input type="text" class="gpa-name" placeholder="Course (optional)" aria-label="Course name"></div>'+
+      '<div style="display:flex;gap:10px"><select class="gpa-grade" aria-label="Grade">'+opts+'</select>'+
+      '<input type="number" class="gpa-cred" value="3" min="0" step="any" style="width:84px" aria-label="Credit hours">'+
+      '<button type="button" class="btn secondary gpa-del" style="padding:8px 14px">x</button></div>';
+    d.querySelector(".gpa-del").addEventListener("click", function(){ d.remove(); go(); });
+    return d;
+  }
+  function readRows(){
+    var arr = [];
+    wrap.querySelectorAll(".field-row").forEach(function(d){
+      arr.push({grade:d.querySelector(".gpa-grade").value, credits:d.querySelector(".gpa-cred").value});
+    });
+    return arr;
+  }
+  function go(){
+    var r = gpaCalc(readRows());
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; return; }
+    out.innerHTML = '<div class="big">'+r.gpaS+' GPA</div><table>'+
+      '<tr><td>Total credits</td><td>'+r.credits+'</td></tr>'+
+      '<tr><td>Total grade points</td><td>'+r.points+'</td></tr></table>';
+  }
+  document.getElementById("gpa-add").addEventListener("click", function(){
+    var r = row(); wrap.appendChild(r);
+    r.querySelectorAll("input,select").forEach(function(el){
+      el.addEventListener("input", go); el.addEventListener("change", go);
+    });
+    go();
+  });
+  wrap.addEventListener("input", go); wrap.addEventListener("change", go);
+  var i; for (i = 0; i < 4; i++) wrap.appendChild(row());
+  go();
+});
+</script>
+</body>
+</html>

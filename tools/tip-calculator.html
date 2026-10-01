@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Tip Calculator — Split the Bill in Seconds</title>
+<meta name="description" content="Calculate restaurant tips and split bills instantly. Set any tip percentage, divide among friends, and see what each person owes. Free online.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a standard tip percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the US, 15\u201320% of the pre-tax bill is standard for restaurants, with 18\u201320% most common for good service. Tipping customs differ by country."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I tip on the pre-tax or post-tax amount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Etiquette guides recommend tipping on the pre-tax subtotal. The difference is usually small \u2014 a dollar or two on a typical bill."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I split a bill evenly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add the tip to the bill total, then divide by the number of people. The calculator above does this automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about automatic gratuity for large groups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many US restaurants add 18\u201320% automatically for parties of 6 or more. Check your bill first so you don't tip twice."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Tip Calculator</h1>
+  <p class="tool-lead">Work out the tip and split the bill fairly — set any percentage and divide the total among any number of people.</p>
+  <div class="tool-box">
+<div class="field"><label for="tip-bill">Bill amount ($)</label>
+  <input type="number" id="tip-bill" value="80" min="0" step="any"></div>
+<div class="field"><label for="tip-pct">Tip: <span id="tip-pct-val">18</span>%</label>
+  <input type="range" id="tip-pct" min="0" max="40" value="18" step="1"></div>
+<div class="presets" id="tip-presets">
+  <button type="button" class="preset" data-p="10">10%</button>
+  <button type="button" class="preset" data-p="15">15%</button>
+  <button type="button" class="preset active" data-p="18">18%</button>
+  <button type="button" class="preset" data-p="20">20%</button>
+  <button type="button" class="preset" data-p="25">25%</button>
+</div>
+<div class="field"><label for="tip-people">Split between (people)</label>
+  <input type="number" id="tip-people" value="2" min="1" step="1"></div>
+<div class="result show" id="tip-result"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How to use the Tip Calculator</h2>
+<p>Tipping customs vary by country, but in the United States the standard restaurant tip is 15 to 20 percent of the pre-tax bill, with 18 to 20 percent now the most common for good service. Bartenders typically get $1 to $2 per drink, and delivery drivers around 10 to 15 percent. This calculator lets you set any percentage so it works wherever you are, whatever the local custom.</p>
+<p>To calculate a tip by hand, move the decimal point of the bill one place left to get 10 percent, then double it for 20 percent. A $64 bill gives $6.40 at 10 percent and $12.80 at 20 percent. The calculator does this instantly and also handles the part people get wrong most often: splitting the bill. Enter the number of diners and it divides the total including tip, so everyone pays their fair share.</p>
+<p>One common question is whether to tip on the pre-tax or post-tax amount. Etiquette guides say the pre-tax subtotal, since tax is not service. In practice the difference is small — on a $100 bill with 8 percent tax, 20 percent pre-tax is $20.00 versus $21.60 post-tax. This calculator tips on the amount you enter, so enter the subtotal if you want to follow the textbook rule.</p>
+<p>Splitting evenly is simplest, but it assumes everyone ordered roughly the same amount. If one person had a steak and three cocktails while others had salads, the fair approach is to divide only shared items (like appetizers) evenly and assign individual items separately — then apply the tip percentage to each person's share. For large parties, note that many US restaurants add an automatic gratuity of 18 to 20 percent for groups of six or more, so check the bill before adding more.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>What is a standard tip percentage?</summary><p>In the US, 15–20% of the pre-tax bill is standard for restaurants, with 18–20% most common for good service. Tipping customs differ by country.</p></details>
+<details><summary>Should I tip on the pre-tax or post-tax amount?</summary><p>Etiquette guides recommend tipping on the pre-tax subtotal. The difference is usually small — a dollar or two on a typical bill.</p></details>
+<details><summary>How do I split a bill evenly?</summary><p>Add the tip to the bill total, then divide by the number of people. The calculator above does this automatically.</p></details>
+<details><summary>What about automatic gratuity for large groups?</summary><p>Many US restaurants add 18–20% automatically for parties of 6 or more. Check your bill first so you don&#x27;t tip twice.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function tipCalc(bill, pct, people){
+  bill = parseFloat(bill); pct = parseFloat(pct); people = parseInt(people, 10);
+  if (isNaN(bill) || bill < 0) return {error:"Please enter a valid bill amount."};
+  if (isNaN(pct) || pct < 0) return {error:"Please enter a valid tip percentage."};
+  if (isNaN(people) || people < 1){ people = 1; }
+  var tip = bill * pct / 100, total = bill + tip, per = total / people;
+  function money(x){ return "$" + x.toFixed(2); }
+  return {tip:tip, total:total, per:per,
+          tipS:money(tip), totalS:money(total), perS:money(per), people:people};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var billEl = document.getElementById("tip-bill"), pctEl = document.getElementById("tip-pct"),
+      pctVal = document.getElementById("tip-pct-val"), pplEl = document.getElementById("tip-people"),
+      out = document.getElementById("tip-result");
+  function syncPresets(){
+    document.querySelectorAll("#tip-presets .preset").forEach(function(b){
+      b.classList.toggle("active", b.getAttribute("data-p") === pctEl.value);
+    });
+  }
+  function go(){
+    var r = tipCalc(billEl.value, pctEl.value, pplEl.value);
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; return; }
+    var rows = "<tr><td>Tip ("+pctEl.value+"%)</td><td>"+r.tipS+"</td></tr>"+
+      "<tr><td>Total with tip</td><td>"+r.totalS+"</td></tr>";
+    if (r.people > 1) rows += "<tr><td>Each of "+r.people+" pays</td><td>"+r.perS+"</td></tr>";
+    out.innerHTML = '<div class="big">'+r.totalS+'</div><table>'+rows+'</table>';
+  }
+  pctEl.addEventListener("input", function(){ pctVal.textContent = pctEl.value; syncPresets(); go(); });
+  document.querySelectorAll("#tip-presets .preset").forEach(function(b){
+    b.addEventListener("click", function(){ pctEl.value = b.getAttribute("data-p");
+      pctVal.textContent = pctEl.value; syncPresets(); go(); });
+  });
+  [billEl, pplEl].forEach(function(el){ el.addEventListener("input", go); });
+  go();
+});
+</script>
+</body>
+</html>

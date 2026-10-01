@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salary Converter — Hourly to Annual Pay (Free)</title>
+<meta name="description" content="Convert hourly, weekly, monthly and annual pay instantly. Enter any pay rate plus hours per week to see every equivalent. Free tool.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many working hours are in a year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full-time year is 2,080 hours: 40 hours x 52 weeks. This excludes holidays and vacation, which vary by employer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert hourly pay to salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply by hours per week, then by 52. $30/hour at 40 hrs/week = $62,400/year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are these figures before or after tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Before tax (gross). Take-home pay is typically 70\u201380% of gross in the US depending on state and deductions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does overtime change the comparison?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. US hourly workers usually earn 1.5x past 40 hours/week, which can make hourly roles pay more than a similar salary."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Salary Converter</h1>
+  <p class="tool-lead">Convert any pay rate into all the others — hourly, weekly, monthly and annual — based on your weekly hours.</p>
+  <div class="tool-box">
+<div class="field-row">
+  <div class="field"><label for="sal-amt">Pay amount ($)</label>
+    <input type="number" id="sal-amt" value="30" min="0" step="any"></div>
+  <div class="field"><label for="sal-per">Per</label>
+    <select id="sal-per">
+      <option value="hour">Hour</option>
+      <option value="day">Day</option>
+      <option value="week">Week</option>
+      <option value="biweek">2 weeks</option>
+      <option value="month">Month</option>
+      <option value="year" selected>Year</option>
+    </select></div>
+</div>
+<div class="field"><label for="sal-hpw">Hours per week</label>
+  <input type="number" id="sal-hpw" value="40" min="1" max="168" step="any"></div>
+<div class="result show" id="sal-result"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>Comparing pay the right way</h2>
+<p>Job offers rarely use the same units: one quotes $28 an hour, another $58,000 a year. To compare them you need a common denominator, which is what this converter provides. The math rests on two conventions: a full-time year has 52 weeks, and a full-time week is usually 40 hours, giving 2,080 working hours per year. Hourly pay x 2,080 = annual salary, and the reverse division goes the other way.</p>
+<p>The hours-per-week setting is what makes part-time comparisons honest. A $25-an-hour job at 30 hours a week pays $39,000 a year, not the $52,000 the 40-hour default implies. Enter your actual schedule and the converter annualizes it correctly, then derives the weekly and monthly equivalents from there. Monthly pay is simply annual divided by 12, which smooths out the irregular rhythm of biweekly paychecks.</p>
+<p>Hourly versus salaried is not just arithmetic. Salaried roles often bundle paid time off, steadier income and benefits, while hourly roles pay for every hour worked including overtime — typically 1.5x the rate past 40 hours in the US. A $60,000 salary at 50 hours a week is effectively about $23 an hour, worse than a $25 hourly job at 40 hours. Always divide by the hours you will actually work.</p>
+<p>These are gross figures: before income tax, social security, retirement contributions and insurance. Take-home pay is commonly 70 to 80 percent of gross in the US, varying widely by state and situation. Use the gross conversion to compare offers apples-to-apples, then run your finalist through a take-home pay calculator for your state before signing.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How many working hours are in a year?</summary><p>A full-time year is 2,080 hours: 40 hours x 52 weeks. This excludes holidays and vacation, which vary by employer.</p></details>
+<details><summary>How do I convert hourly pay to salary?</summary><p>Multiply by hours per week, then by 52. $30/hour at 40 hrs/week = $62,400/year.</p></details>
+<details><summary>Are these figures before or after tax?</summary><p>Before tax (gross). Take-home pay is typically 70–80% of gross in the US depending on state and deductions.</p></details>
+<details><summary>Does overtime change the comparison?</summary><p>Yes. US hourly workers usually earn 1.5x past 40 hours/week, which can make hourly roles pay more than a similar salary.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function salaryConvert(amount, period, hpw){
+  amount = parseFloat(amount); hpw = parseFloat(hpw);
+  if (isNaN(amount) || amount < 0) return {error:"Please enter a valid pay amount."};
+  if (isNaN(hpw) || hpw <= 0 || hpw > 168) return {error:"Hours per week must be between 1 and 168."};
+  var perYear = {hour: hpw * 52, day: 260, week: 52, biweek: 26, month: 12, year: 1};
+  var annual = amount * perYear[period];
+  var hourly = annual / (hpw * 52), weekly = annual / 52, monthly = annual / 12;
+  function money(x){
+    var r = x >= 100 ? Math.round(x) : Math.round(x * 100) / 100;
+    return "$" + r.toLocaleString("en-US");
+  }
+  return {hourly:hourly, weekly:weekly, monthly:monthly, annual:annual,
+          hourlyS:money(hourly), weeklyS:money(weekly), monthlyS:money(monthly), annualS:money(annual)};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var aEl = document.getElementById("sal-amt"), pEl = document.getElementById("sal-per"),
+      hEl = document.getElementById("sal-hpw"), out = document.getElementById("sal-result");
+  function go(){
+    var r = salaryConvert(aEl.value, pEl.value, hEl.value);
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; return; }
+    out.innerHTML = "<table>"+
+      "<tr><td>Hourly</td><td>"+r.hourlyS+"</td></tr>"+
+      "<tr><td>Weekly</td><td>"+r.weeklyS+"</td></tr>"+
+      "<tr><td>Monthly</td><td>"+r.monthlyS+"</td></tr>"+
+      "<tr><td>Annual</td><td>"+r.annualS+"</td></tr></table>"+
+      '<p style="font-size:.85rem;color:#6b7280;margin-top:8px">Gross pay, before taxes. Assumes 52 weeks/year.</p>';
+  }
+  [aEl, pEl, hEl].forEach(function(el){ el.addEventListener("input", go); el.addEventListener("change", go); });
+  go();
+});
+</script>
+</body>
+</html>
