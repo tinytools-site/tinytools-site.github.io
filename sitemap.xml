@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://tinytools-site.github.io/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://tinytools-site.github.io/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/privacy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/terms.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/tools/percentage-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/tools/age-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/tools/bmi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/tools/loan-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/tools/unit-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/tools/word-counter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/tools/password-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/tools/text-case-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/tools/pomodoro-timer.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/tools/date-duration-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>
