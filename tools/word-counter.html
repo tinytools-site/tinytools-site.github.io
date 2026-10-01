@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Word Counter — Count Words, Characters &amp; Reading Time</title>
+<meta name="description" content="Count words, characters (with/without spaces), sentences, paragraphs and reading time as you type. Free online word counter.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How are words counted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any sequence of characters separated by whitespace counts as one word, matching the convention used by most editors and platforms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between characters with and without spaces?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some limits (SMS, meta descriptions) count spaces as characters; others don't. We show both so you can match whichever standard you need."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is reading time estimated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 200 words per minute, the average silent reading speed. For spoken delivery, allow roughly 130\u2013150 words per minute."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Counting happens entirely in your browser via JavaScript. Your text never leaves your device."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Word &amp; Character Counter</h1>
+  <p class="tool-lead">Paste or type your text to count words, characters, sentences and paragraphs instantly — with estimated reading time.</p>
+  <div class="tool-box">
+<div class="field"><label for="wc-text">Your text</label>
+<textarea id="wc-text" rows="9" placeholder="Type or paste your text here..."></textarea></div>
+<div class="result show" id="wc-result"><p style="color:#6b7280">Start typing to see live counts.</p></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>Why count words and characters?</h2>
+<p>Word and character counts matter wherever limits apply. Social platforms cap post lengths, search engines truncate long titles and meta descriptions, academic work comes with word targets, and translators usually charge by the word. Counting by hand is slow and error-prone; an instant counter removes the guesswork while you write.</p>
+<p>Words are counted as sequences of characters separated by whitespace, which matches how most editors and platforms count. Characters are shown both with and without spaces because different systems use different standards — SMS segments and some meta fields count every character including spaces, while other limits ignore them. Sentences are detected by terminal punctuation (. ! ?), and paragraphs by line breaks.</p>
+<p>The reading-time estimate assumes about 200 words per minute, the widely cited average for silent reading of general text. Technical or dense material takes longer, light fiction less, but the estimate is a useful guide for blog posts, speeches (spoken delivery is closer to 130–150 words per minute) and video scripts.</p>
+<p>Everything is counted live as you type, entirely in your browser. Your text is never uploaded or stored, which makes this safe for drafts, private notes and client work. There is no word limit on the input — paste a full manuscript if you like.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How are words counted?</summary><p>Any sequence of characters separated by whitespace counts as one word, matching the convention used by most editors and platforms.</p></details>
+<details><summary>What is the difference between characters with and without spaces?</summary><p>Some limits (SMS, meta descriptions) count spaces as characters; others don&#x27;t. We show both so you can match whichever standard you need.</p></details>
+<details><summary>How is reading time estimated?</summary><p>At 200 words per minute, the average silent reading speed. For spoken delivery, allow roughly 130–150 words per minute.</p></details>
+<details><summary>Is my text uploaded anywhere?</summary><p>No. Counting happens entirely in your browser via JavaScript. Your text never leaves your device.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function countText(t){
+  t = t || "";
+  var words = (t.trim().match(/\S+/g) || []).length;
+  var chars = t.length;
+  var noSpaces = t.replace(/\s/g, "").length;
+  var sentences = (t.match(/[^.!?\s][^.!?]*(?:[.!?](?!['"]?\s|$)[^.!?]*)*[.!?]['"]?(?=\s|$)/g) || []).length;
+  if (t.trim() && sentences === 0) sentences = 1;
+  var paragraphs = t.trim() ? t.trim().split(/\n\s*\n|\n/).filter(function(p){return p.trim().length>0;}).length : 0;
+  var reading = Math.max(1, Math.ceil(words / 200));
+  return {words:words, chars:chars, noSpaces:noSpaces, sentences:sentences,
+          paragraphs:paragraphs, reading:reading};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var ta = document.getElementById("wc-text"), out = document.getElementById("wc-result");
+  function go(){
+    var r = countText(ta.value);
+    function n(x){ return x.toLocaleString("en-US"); }
+    out.innerHTML = '<table>' +
+      '<tr><td>Words</td><td>'+n(r.words)+'</td></tr>' +
+      '<tr><td>Characters (with spaces)</td><td>'+n(r.chars)+'</td></tr>' +
+      '<tr><td>Characters (no spaces)</td><td>'+n(r.noSpaces)+'</td></tr>' +
+      '<tr><td>Sentences</td><td>'+n(r.sentences)+'</td></tr>' +
+      '<tr><td>Paragraphs</td><td>'+n(r.paragraphs)+'</td></tr>' +
+      '<tr><td>Reading time</td><td>~'+r.reading+' min</td></tr></table>';
+  }
+  ta.addEventListener("input", go); go();
+});
+</script>
+</body>
+</html>

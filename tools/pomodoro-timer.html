@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Pomodoro Timer Online — 25-Minute Focus Sessions</title>
+<meta name="description" content="Boost productivity with a free Pomodoro timer: 25-minute focus sessions, short and long breaks, session tracking. No sign-up needed.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Pomodoro Technique?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A focus method using 25-minute work sessions separated by 5-minute breaks, with a longer break after every four sessions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change the timer durations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Use the presets or set custom focus, short-break and long-break lengths to match your workflow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the timer work in a background tab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It uses a timestamp-based countdown that stays accurate even when the tab is not visible, and plays a chime when time is up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my session count saved?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On this device only, via your browser's local storage. Nothing is sent to any server."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Pomodoro Focus Timer</h1>
+  <p class="tool-lead">Work in focused 25-minute sessions with timed breaks. Start the timer, stay on one task, and track your completed pomodoros.</p>
+  <div class="tool-box">
+<div class="presets">
+  <button class="preset active" data-focus="25" data-short="5" data-long="15">Classic 25/5</button>
+  <button class="preset" data-focus="50" data-short="10" data-long="30">Deep work 50/10</button>
+  <button class="preset" data-focus="15" data-short="3" data-long="10">Quick 15/3</button>
+</div>
+<div class="field-row">
+  <div class="field"><label for="pom-focus">Focus (min)</label><input type="number" id="pom-focus" value="25" min="1" max="180"></div>
+  <div class="field"><label for="pom-short">Short break (min)</label><input type="number" id="pom-short" value="5" min="1" max="60"></div>
+  <div class="field"><label for="pom-long">Long break (min)</label><input type="number" id="pom-long" value="15" min="1" max="120"></div>
+</div>
+<div class="timer-display" id="pom-display">25:00</div>
+<p style="text-align:center;color:#6b7280" id="pom-state">Ready — press Start</p>
+<div class="timer-controls">
+  <button class="btn" id="pom-start">Start</button>
+  <button class="btn secondary" id="pom-pause">Pause</button>
+  <button class="btn secondary" id="pom-reset">Reset</button>
+  <button class="btn secondary" id="pom-skip">Skip</button>
+</div>
+<p style="text-align:center;margin-top:12px;color:#6b7280">Completed pomodoros today: <b id="pom-count">0</b></p>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How the Pomodoro Technique works</h2>
+<p>The Pomodoro Technique is a time-management method created by Francesco Cirillo in the late 1980s and named after the tomato-shaped kitchen timer he used. The idea is simple: work in focused 25-minute intervals (“pomodoros”), separated by 5-minute breaks, with a longer 15 to 30-minute break after every four sessions. The timer creates a sense of urgency that makes it easier to start — and starting is usually the hardest part.</p>
+<p>Why 25 minutes? It is long enough to make real progress but short enough that your brain does not rebel. Research on attention and ultradian rhythms suggests focus naturally comes in roughly 90-minute cycles with dips in between; the pomodoro's frequent breaks work with these rhythms instead of fighting them. During a session the rule is strict: one task only. If something distracting pops up, write it down and return to it in the break.</p>
+<p>The breaks are not optional — they are the mechanism. Short breaks let your working memory clear and prevent the gradual focus decay of long marathons. Stand up, stretch, look away from the screen, get water. The long break every two hours is for genuine rest: a walk, a snack, or simply doing nothing for a while.</p>
+<p>This timer runs entirely in your browser with an audible chime when a session or break ends, so it works even with the tab in the background. Your completed-session count is saved on this device, letting you see at a glance how many focused blocks you put in today. Customize the durations if 25 minutes does not suit your work — the best interval is the one you will actually use.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>What is the Pomodoro Technique?</summary><p>A focus method using 25-minute work sessions separated by 5-minute breaks, with a longer break after every four sessions.</p></details>
+<details><summary>Can I change the timer durations?</summary><p>Yes. Use the presets or set custom focus, short-break and long-break lengths to match your workflow.</p></details>
+<details><summary>Does the timer work in a background tab?</summary><p>Yes. It uses a timestamp-based countdown that stays accurate even when the tab is not visible, and plays a chime when time is up.</p></details>
+<details><summary>Is my session count saved?</summary><p>On this device only, via your browser&#x27;s local storage. Nothing is sent to any server.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function pomFormat(sec){
+  sec = Math.max(0, Math.ceil(sec));
+  var m = Math.floor(sec / 60), s = sec % 60;
+  return (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+}
+function pomNext(mode, done){
+  // done = completed focus sessions so far
+  if (mode === "focus") return (done + 1) % 4 === 0 ? "long" : "short";
+  return "focus";
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var display = document.getElementById("pom-display"), state = document.getElementById("pom-state"),
+      startB = document.getElementById("pom-start"), countEl = document.getElementById("pom-count"),
+      fEl = document.getElementById("pom-focus"), sEl = document.getElementById("pom-short"), lEl = document.getElementById("pom-long");
+  var mode = "focus", endAt = 0, left = 25*60, timer = null, done = 0;
+  try{ done = parseInt(localStorage.getItem("tt_pom_done") || "0", 10) || 0; }catch(e){}
+  countEl.textContent = done;
+  function dur(){ return {focus:Math.max(1,parseInt(fEl.value,10)||25)*60,
+    short:Math.max(1,parseInt(sEl.value,10)||5)*60, long:Math.max(1,parseInt(lEl.value,10)||15)*60}; }
+  function render(){ display.textContent = pomFormat(left);
+    state.textContent = mode === "focus" ? "Focus session" : mode === "short" ? "Short break — relax" : "Long break — rest well"; }
+  function beep(){
+    try{
+      var ctx = new (window.AudioContext || window.webkitAudioContext)();
+      [0, 0.25, 0.5].forEach(function(d){
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.connect(g); g.connect(ctx.destination); o.frequency.value = 880;
+        o.start(ctx.currentTime + d); o.stop(ctx.currentTime + d + 0.2);
+      });
+    }catch(e){}
+  }
+  function tick(){
+    left = Math.max(0, Math.round((endAt - Date.now()) / 1000));
+    render();
+    if (left <= 0){
+      clearInterval(timer); timer = null; beep();
+      if (mode === "focus"){ done++; try{ localStorage.setItem("tt_pom_done", done); }catch(e){} countEl.textContent = done; }
+      mode = pomNext(mode, mode === "focus" ? done : done);
+      left = dur()[mode]; render();
+      startB.textContent = "Start";
+    }
+  }
+  startB.addEventListener("click", function(){
+    if (timer) return;
+    endAt = Date.now() + left * 1000;
+    timer = setInterval(tick, 500); startB.textContent = "Running...";
+  });
+  document.getElementById("pom-pause").addEventListener("click", function(){
+    if (timer){ clearInterval(timer); timer = null; startB.textContent = "Resume"; }
+  });
+  document.getElementById("pom-reset").addEventListener("click", function(){
+    if (timer){ clearInterval(timer); timer = null; }
+    mode = "focus"; left = dur().focus; render(); startB.textContent = "Start";
+  });
+  document.getElementById("pom-skip").addEventListener("click", function(){
+    if (timer){ clearInterval(timer); timer = null; }
+    if (mode === "focus"){ done++; try{ localStorage.setItem("tt_pom_done", done); }catch(e){} countEl.textContent = done; }
+    mode = pomNext(mode, done); left = dur()[mode]; render(); startB.textContent = "Start";
+  });
+  document.querySelectorAll(".preset").forEach(function(p){
+    p.addEventListener("click", function(){
+      document.querySelectorAll(".preset").forEach(function(x){ x.classList.remove("active"); });
+      p.classList.add("active");
+      fEl.value = p.getAttribute("data-focus"); sEl.value = p.getAttribute("data-short"); lEl.value = p.getAttribute("data-long");
+      if (timer){ clearInterval(timer); timer = null; startB.textContent = "Start"; }
+      mode = "focus"; left = dur().focus; render();
+    });
+  });
+  render();
+});
+</script>
+</body>
+</html>

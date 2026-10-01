@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Date Duration Calculator — Days Between Two Dates</title>
+<meta name="description" content="Calculate the exact duration between two dates: days, weeks, months, years and business days. Free online date calculator.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many days are between two dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter both dates above \u2014 the calculator counts every calendar day in between, handling leap years automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between calendar days and business days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Calendar days include weekends; business days exclude Saturdays and Sundays. Enable the business-day option for work planning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are leap years handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. February 29th is counted whenever it falls within your date range."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the count include the end date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No \u2014 the difference is exclusive, so Jan 1 to Jan 2 counts as 1 day, matching the standard convention."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Date Duration Calculator</h1>
+  <p class="tool-lead">Find the exact time between any two dates — in days, weeks, months and years, with an optional business-day count.</p>
+  <div class="tool-box">
+<div class="field-row">
+  <div class="field"><label for="dd-from">Start date</label>
+    <input type="date" id="dd-from" value="2026-01-01"></div>
+  <div class="field"><label for="dd-to">End date</label>
+    <input type="date" id="dd-to" value="2026-10-01"></div>
+</div>
+<div class="check-row"><label><input type="checkbox" id="dd-biz"> Also count business days (exclude weekends)</label></div>
+<button class="btn" id="dd-go">Calculate duration</button>
+<div class="result" id="dd-result"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>Calculating the time between two dates</h2>
+<p>Counting the days between two dates sounds simple until you try it by hand across month and year boundaries. The reliable method is to convert both dates to a day count (days since a fixed reference) and subtract — which is exactly what this calculator does using your browser's date handling, including leap years. February 29ths are counted only when they actually fall inside the range.</p>
+<p>The breakdown into years, months and days uses calendar arithmetic rather than fixed conversions, because months are not all the same length. A span from March 15 to June 15 is exactly 3 months, while March 15 to June 14 is 2 months and 30 days. This matches how people naturally describe durations (“three months”) and how contracts usually measure them.</p>
+<p>The business-day count excludes Saturdays and Sundays, which is what project plans, shipping estimates and service-level agreements usually mean by “days”. Public holidays are not excluded because they vary by country and region — if your count needs to skip holidays, subtract them from the business-day total manually.</p>
+<p>Common uses include: days until a deadline or event, exact relationship and employment anniversaries, pregnancy and project timelines, warranty and subscription periods, and historical research (“how many days between these two events?”). The result can include or exclude the end date; this calculator counts the difference exclusively, so January 1 to January 2 is 1 day.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How many days are between two dates?</summary><p>Enter both dates above — the calculator counts every calendar day in between, handling leap years automatically.</p></details>
+<details><summary>What is the difference between calendar days and business days?</summary><p>Calendar days include weekends; business days exclude Saturdays and Sundays. Enable the business-day option for work planning.</p></details>
+<details><summary>Are leap years handled?</summary><p>Yes. February 29th is counted whenever it falls within your date range.</p></details>
+<details><summary>Does the count include the end date?</summary><p>No — the difference is exclusive, so Jan 1 to Jan 2 counts as 1 day, matching the standard convention.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function dateDiff(fromISO, toISO, business){
+  var a = new Date(fromISO + "T00:00:00"), b = new Date(toISO + "T00:00:00");
+  a = new Date(a.getFullYear(), a.getMonth(), a.getDate());
+  b = new Date(b.getFullYear(), b.getMonth(), b.getDate());
+  if (isNaN(a.getTime()) || isNaN(b.getTime())) return {error:"Please enter two valid dates."};
+  var start = a < b ? a : b, end = a < b ? b : a;
+  var days = Math.round((end - start) / 86400000);
+  // calendar breakdown
+  var y = end.getFullYear() - start.getFullYear(),
+      m = end.getMonth() - start.getMonth(), d = end.getDate() - start.getDate();
+  if (d < 0){ m--; d += new Date(end.getFullYear(), end.getMonth(), 0).getDate(); }
+  if (m < 0){ y--; m += 12; }
+  var res = {days:days, weeks:Math.floor(days/7), remDays:days%7, y:y, m:m, d:d,
+             hours:days*24, minutes:days*1440};
+  if (business){
+    var biz = 0, cur = new Date(start);
+    while (cur < end){ var wd = cur.getDay(); if (wd !== 0 && wd !== 6) biz++; cur.setDate(cur.getDate()+1); }
+    res.business = biz;
+  }
+  return res;
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var out = document.getElementById("dd-result");
+  document.getElementById("dd-go").addEventListener("click", function(){
+    var r = dateDiff(document.getElementById("dd-from").value,
+                     document.getElementById("dd-to").value,
+                     document.getElementById("dd-biz").checked);
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; }
+    else {
+      var h = '<div class="big">'+r.days.toLocaleString("en-US")+' days</div><table>' +
+        '<tr><td>Years / months / days</td><td>'+r.y+'y '+r.m+'m '+r.d+'d</td></tr>' +
+        '<tr><td>Weeks</td><td>'+r.weeks+' weeks'+(r.remDays ? ' + '+r.remDays+' days' : '')+'</td></tr>' +
+        '<tr><td>Hours</td><td>'+r.hours.toLocaleString("en-US")+'</td></tr>';
+      if (r.business !== undefined) h += '<tr><td>Business days</td><td>'+r.business.toLocaleString("en-US")+'</td></tr>';
+      out.innerHTML = h + '</table>';
+    }
+    out.classList.add("show");
+  });
+});
+</script>
+</body>
+</html>

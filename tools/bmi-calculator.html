@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free BMI Calculator — Body Mass Index Chart &amp; Categories</title>
+<meta name="description" content="Calculate your Body Mass Index instantly in metric or imperial units, with WHO categories and a healthy weight range. Free online tool.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the formula for BMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI = weight (kg) \u00f7 height (m)\u00b2. In imperial units: BMI = 703 \u00d7 weight (lb) \u00f7 height (in)\u00b2."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a healthy BMI range?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "According to the WHO, a BMI between 18.5 and 24.9 is considered the healthy weight range for adults."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is BMI accurate for muscular people?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not always. BMI cannot tell muscle apart from fat, so athletes may be classed as overweight despite low body fat. Waist circumference and body-fat estimates give a fuller picture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does BMI apply to children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Children's BMI is interpreted with age- and sex-specific percentile charts. This calculator uses adult WHO categories only."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>BMI Calculator</h1>
+  <p class="tool-lead">Enter your height and weight to get your Body Mass Index, WHO category and healthy weight range — in metric or imperial units.</p>
+  <div class="tool-box">
+<div class="check-row">
+  <label><input type="radio" name="bmi-unit" value="metric" checked> Metric (cm / kg)</label>
+  <label><input type="radio" name="bmi-unit" value="imperial"> Imperial (in / lb)</label>
+</div>
+<div class="field-row">
+  <div class="field"><label for="bmi-h" id="bmi-h-label">Height (cm)</label>
+    <input type="number" id="bmi-h" value="175" step="any" min="1"></div>
+  <div class="field"><label for="bmi-w" id="bmi-w-label">Weight (kg)</label>
+    <input type="number" id="bmi-w" value="70" step="any" min="1"></div>
+</div>
+<button class="btn" id="bmi-go">Calculate BMI</button>
+<div class="result" id="bmi-result"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>What is BMI and how is it calculated?</h2>
+<p>Body Mass Index (BMI) is a screening measure that relates your weight to your height. It is calculated by dividing your weight in kilograms by the square of your height in metres. In imperial units the formula is weight in pounds divided by height in inches squared, multiplied by 703. The result is a single number that places you in a weight category defined by the World Health Organization.</p>
+<p>The WHO categories are: under 18.5 is underweight, 18.5 to 24.9 is the healthy range, 25 to 29.9 is overweight, and 30 or above is obesity (split into classes I, II and III). These cut-offs are the same for adult men and women, and they are widely used by doctors and insurers as a first screening step — not as a diagnosis on their own.</p>
+<p>BMI is popular because it needs only a scale and a tape measure, but it has well-known limits. It cannot distinguish muscle from fat, so athletes and very muscular people can score as “overweight” while being perfectly healthy. It also does not account for where fat is carried, age-related muscle loss, or differences across ethnic groups, which is why doctors pair it with waist measurements and other checks.</p>
+<p>Use this calculator as a quick general guide. If your result falls outside the healthy range, or if you have any health concerns, talk to a healthcare professional rather than relying on the number alone. A “healthy” BMI does not guarantee good health, and an “unhealthy” one does not guarantee illness — it is a starting point for a conversation, not a verdict.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>What is the formula for BMI?</summary><p>BMI = weight (kg) ÷ height (m)². In imperial units: BMI = 703 × weight (lb) ÷ height (in)².</p></details>
+<details><summary>What is a healthy BMI range?</summary><p>According to the WHO, a BMI between 18.5 and 24.9 is considered the healthy weight range for adults.</p></details>
+<details><summary>Is BMI accurate for muscular people?</summary><p>Not always. BMI cannot tell muscle apart from fat, so athletes may be classed as overweight despite low body fat. Waist circumference and body-fat estimates give a fuller picture.</p></details>
+<details><summary>Does BMI apply to children?</summary><p>No. Children&#x27;s BMI is interpreted with age- and sex-specific percentile charts. This calculator uses adult WHO categories only.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function calcBMI(h, w, unit){
+  h = parseFloat(h); w = parseFloat(w);
+  if (isNaN(h) || isNaN(w) || h <= 0 || w <= 0) return {error:"Please enter valid height and weight."};
+  var bmi = unit === "metric" ? w / Math.pow(h/100, 2) : 703 * w / (h*h);
+  bmi = Math.round(bmi * 10) / 10;
+  var cat, color;
+  if (bmi < 18.5){ cat = "Underweight"; color = "#3b82f6"; }
+  else if (bmi < 25){ cat = "Healthy weight"; color = "#16a34a"; }
+  else if (bmi < 30){ cat = "Overweight"; color = "#f59e0b"; }
+  else { cat = "Obesity"; color = "#ef4444"; }
+  var lo, hi;
+  if (unit === "metric"){ lo = 18.5 * Math.pow(h/100,2); hi = 24.9 * Math.pow(h/100,2); }
+  else { lo = 18.5 * h*h/703; hi = 24.9 * h*h/703; }
+  return {bmi:bmi, cat:cat, color:color,
+          range: Math.round(lo*10)/10 + " – " + Math.round(hi*10)/10 + (unit==="metric"?" kg":" lb")};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var hEl = document.getElementById("bmi-h"), wEl = document.getElementById("bmi-w"),
+      out = document.getElementById("bmi-result"),
+      hL = document.getElementById("bmi-h-label"), wL = document.getElementById("bmi-w-label");
+  function unit(){ return document.querySelector('input[name="bmi-unit"]:checked').value; }
+  document.querySelectorAll('input[name="bmi-unit"]').forEach(function(r){
+    r.addEventListener("change", function(){
+      var u = unit();
+      hL.textContent = u === "metric" ? "Height (cm)" : "Height (in)";
+      wL.textContent = u === "metric" ? "Weight (kg)" : "Weight (lb)";
+      if (u === "metric"){ hEl.value = 175; wEl.value = 70; } else { hEl.value = 69; wEl.value = 154; }
+    });
+  });
+  document.getElementById("bmi-go").addEventListener("click", function(){
+    var r = calcBMI(hEl.value, wEl.value, unit());
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; }
+    else {
+      out.innerHTML = '<div class="big" style="color:'+r.color+'">'+r.bmi+' — '+r.cat+'</div>' +
+        '<table><tr><td>Healthy range for your height</td><td>'+r.range+'</td></tr></table>' +
+        '<p style="font-size:.85rem;color:#6b7280;margin-top:8px">BMI is a screening guide only, not a medical diagnosis.</p>';
+    }
+    out.classList.add("show");
+  });
+});
+</script>
+</body>
+</html>

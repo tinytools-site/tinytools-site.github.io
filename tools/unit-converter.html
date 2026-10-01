@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Unit Converter — Length, Weight &amp; Temperature</title>
+<meta name="description" content="Convert length, weight and temperature units instantly: km to miles, kg to lbs, Celsius to Fahrenheit and more. Free online converter.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many km are in a mile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Exactly 1.609344 km per international agreement. So 5 miles = 8.047 km."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert Celsius to Fahrenheit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply by 9/5 and add 32. For example, 20\u00b0C = 68\u00b0F. To go the other way, subtract 32 and multiply by 5/9."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many pounds are in a kilogram?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One kilogram equals approximately 2.20462 pounds (exactly 1/0.45359237)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the conversion factors exact?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For length and weight, yes \u2014 they are defined by international agreement (1 in = 2.54 cm, 1 lb = 0.45359237 kg). Temperature formulas are exact by definition."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Unit Converter</h1>
+  <p class="tool-lead">Convert between metric and imperial units for length, weight and temperature — with exact conversion factors.</p>
+  <div class="tool-box">
+<div class="field"><label for="uc-cat">Category</label>
+  <select id="uc-cat">
+    <option value="length">Length</option>
+    <option value="weight">Weight</option>
+    <option value="temp">Temperature</option>
+  </select></div>
+<div class="field"><label for="uc-val">Value</label>
+  <input type="number" id="uc-val" value="1" step="any"></div>
+<div class="field-row">
+  <div class="field"><label for="uc-from">From</label><select id="uc-from"></select></div>
+  <div class="field"><label for="uc-to">To</label><select id="uc-to"></select></div>
+</div>
+<button class="btn secondary" id="uc-swap" type="button">⇄ Swap</button>
+<div class="result show" id="uc-result" style="margin-top:16px"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>About unit conversion</h2>
+<p>Most of the world uses the metric system, while the United States still uses imperial units day to day, which is why converters get so much traffic. Length conversions are exact by international agreement: one inch is defined as exactly 2.54 centimetres, so one mile equals exactly 1.609344 kilometres and one foot equals exactly 0.3048 metres. Because the factors are exact, conversions between metric and imperial lengths introduce no rounding error beyond the decimals you choose to display.</p>
+<p>Weight works the same way: one pound is defined as exactly 0.45359237 kilograms, making one kilogram equal to about 2.20462 pounds and one ounce about 28.3495 grams. These definitions have been fixed since 1959, so every converter that uses them agrees. Temperature is the odd one out because Celsius and Fahrenheit have different zero points as well as different scales: °F = °C × 9/5 + 32, and Kelvin simply adds 273.15 to Celsius.</p>
+<p>A frequent source of mistakes is mixing up similar-sounding units — fluid ounces (volume) versus ounces (weight), or the long ton versus the short ton. This converter sticks to the unambiguous everyday units: kilometres, metres, centimetres, millimetres, miles, yards, feet and inches for length; kilograms, grams, pounds and ounces for weight; and Celsius, Fahrenheit and Kelvin for temperature.</p>
+<p>All conversions run instantly in your browser with full floating-point precision, and the result display rounds sensibly so you are not staring at twelve decimal places. Swap the direction with one tap, and bookmark the page — it works offline once loaded and never sends your numbers anywhere.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How many km are in a mile?</summary><p>Exactly 1.609344 km per international agreement. So 5 miles = 8.047 km.</p></details>
+<details><summary>How do I convert Celsius to Fahrenheit?</summary><p>Multiply by 9/5 and add 32. For example, 20°C = 68°F. To go the other way, subtract 32 and multiply by 5/9.</p></details>
+<details><summary>How many pounds are in a kilogram?</summary><p>One kilogram equals approximately 2.20462 pounds (exactly 1/0.45359237).</p></details>
+<details><summary>Are the conversion factors exact?</summary><p>For length and weight, yes — they are defined by international agreement (1 in = 2.54 cm, 1 lb = 0.45359237 kg). Temperature formulas are exact by definition.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+var UC = {
+  length: {label:"Length", units:{km:1000, m:1, cm:0.01, mm:0.001, mi:1609.344, yd:0.9144, ft:0.3048, inch:0.0254},
+           names:{km:"Kilometres", m:"Metres", cm:"Centimetres", mm:"Millimetres", mi:"Miles", yd:"Yards", ft:"Feet", inch:"Inches"}},
+  weight: {label:"Weight", units:{kg:1, g:0.001, lb:0.45359237, oz:0.028349523125},
+           names:{kg:"Kilograms", g:"Grams", lb:"Pounds", oz:"Ounces"}},
+  temp:   {label:"Temperature", units:{C:1, F:1, K:1},
+           names:{C:"Celsius (°C)", F:"Fahrenheit (°F)", K:"Kelvin (K)"}}
+};
+function ucConvert(cat, val, from, to){
+  val = parseFloat(val);
+  if (isNaN(val)) return {error:"Please enter a number."};
+  if (cat === "temp"){
+    var c = from === "C" ? val : from === "F" ? (val - 32) * 5/9 : val - 273.15;
+    var out = to === "C" ? c : to === "F" ? c * 9/5 + 32 : c + 273.15;
+    return {value: Math.round(out * 10000) / 10000};
+  }
+  var u = UC[cat].units;
+  return {value: Math.round((val * u[from] / u[to]) * 1000000) / 1000000};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var catEl = document.getElementById("uc-cat"), fromEl = document.getElementById("uc-from"),
+      toEl = document.getElementById("uc-to"), valEl = document.getElementById("uc-val"),
+      out = document.getElementById("uc-result");
+  function fill(){
+    var cat = UC[catEl.value];
+    [fromEl, toEl].forEach(function(sel){
+      sel.innerHTML = "";
+      Object.keys(cat.units).forEach(function(k){
+        var o = document.createElement("option"); o.value = k; o.textContent = cat.names[k]; sel.appendChild(o);
+      });
+    });
+    toEl.selectedIndex = 1;
+    go();
+  }
+  function go(){
+    var r = ucConvert(catEl.value, valEl.value, fromEl.value, toEl.value);
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; return; }
+    out.innerHTML = '<div class="big">' + valEl.value + " " + UC[catEl.value].names[fromEl.value] +
+      " = <br>" + r.value.toLocaleString("en-US") + " " + UC[catEl.value].names[toEl.value] + "</div>";
+  }
+  catEl.addEventListener("change", fill);
+  [fromEl, toEl, valEl].forEach(function(el){ el.addEventListener("input", go); el.addEventListener("change", go); });
+  document.getElementById("uc-swap").addEventListener("click", function(){
+    var t = fromEl.value; fromEl.value = toEl.value; toEl.value = t; go();
+  });
+  fill();
+});
+</script>
+</body>
+</html>

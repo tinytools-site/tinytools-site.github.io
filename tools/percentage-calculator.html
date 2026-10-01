@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Percentage Calculator Online — TinyTools</title>
+<meta name="description" content="Calculate percentages instantly: X% of Y, percentage increase/decrease and reverse percentages. Free, fast, no sign-up.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate X percent of Y?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply Y by X, then divide by 100. For example, 15% of 200 is 200 \u00d7 15 \u00f7 100 = 30. You can also use the first mode of the calculator above."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the percentage increase between two numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subtract the original number from the new number, divide the result by the original number, and multiply by 100. Use the percentage-change mode above and it does this automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between percent and percentage points?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A move from 10% to 15% is a 5 percentage point increase, but a 50% relative increase. Percentage points measure the absolute difference between two rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I reverse a percentage, e.g. find the original price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you know the final value and the percentage applied, divide the final value by (1 \u00b1 rate). The calculator's reverse mode handles discounts and markups for you."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Percentage Calculator</h1>
+  <p class="tool-lead">Work out any percentage in seconds — discounts, tips, increases, decreases and reverse percentages.</p>
+  <div class="tool-box">
+<div class="field">
+  <label for="pct-mode">Calculation type</label>
+  <select id="pct-mode">
+    <option value="of">What is X% of Y?</option>
+    <option value="is">X is what % of Y?</option>
+    <option value="change">Percentage increase / decrease</option>
+    <option value="reverse">Reverse: Y after X% change &rarr; original</option>
+  </select>
+</div>
+<div class="field-row">
+  <div class="field"><label for="pct-a" id="pct-label-a">Percentage (%)</label>
+    <input type="number" id="pct-a" value="20" step="any"></div>
+  <div class="field"><label for="pct-b" id="pct-label-b">Value</label>
+    <input type="number" id="pct-b" value="80" step="any"></div>
+</div>
+<div class="field" id="pct-dir-wrap" style="display:none">
+  <label for="pct-dir">Change direction</label>
+  <select id="pct-dir"><option value="up">Increase (+)</option><option value="down">Decrease (&minus;)</option></select>
+</div>
+<button class="btn" id="pct-go">Calculate</button>
+<div class="result" id="pct-result"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How to use the Percentage Calculator</h2>
+<p>Percentages show up everywhere: shop discounts, restaurant tips, tax rates, salary raises and exam scores. A percentage is simply a number expressed as a fraction of 100, so 25% means 25 out of every 100. This calculator handles the three calculations people need most, without you having to remember the formulas.</p>
+<p>To find X percent of Y, multiply Y by X and divide by 100. For example, a 20% discount on an $80 item is 80 × 20 ÷ 100 = $16 off, so you pay $64. To find what percentage X is of Y, divide X by Y and multiply by 100 — a score of 42 out of 60 is 42 ÷ 60 × 100 = 70%. For percentage change, subtract the old value from the new value, divide by the old value and multiply by 100. A price rising from $50 to $65 is a 30% increase.</p>
+<p>One common source of confusion is the difference between a percentage change and percentage points. If an interest rate moves from 4% to 6%, that is a 2 percentage point increase, but a 50% relative increase. News headlines sometimes mix these up, so it pays to check which one is meant.</p>
+<p>The reverse-percentage mode answers questions like: if $45 is the price after a 10% discount, what was the original price? The answer is $50. This is handy when you only know the final amount and the rate that was applied. All calculations run instantly in your browser — nothing is sent to a server, and there is no limit on how many times you use it.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How do I calculate X percent of Y?</summary><p>Multiply Y by X, then divide by 100. For example, 15% of 200 is 200 × 15 ÷ 100 = 30. You can also use the first mode of the calculator above.</p></details>
+<details><summary>How do I find the percentage increase between two numbers?</summary><p>Subtract the original number from the new number, divide the result by the original number, and multiply by 100. Use the percentage-change mode above and it does this automatically.</p></details>
+<details><summary>What is the difference between percent and percentage points?</summary><p>A move from 10% to 15% is a 5 percentage point increase, but a 50% relative increase. Percentage points measure the absolute difference between two rates.</p></details>
+<details><summary>How do I reverse a percentage, e.g. find the original price?</summary><p>If you know the final value and the percentage applied, divide the final value by (1 ± rate). The calculator&#x27;s reverse mode handles discounts and markups for you.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function pctCalc(mode, a, b, dir){
+  a = parseFloat(a); b = parseFloat(b);
+  if (isNaN(a) || isNaN(b)) return {error:"Please enter valid numbers."};
+  var r;
+  if (mode === "of"){ r = b * a / 100; return {big: fmt(r), rows:[["Result", fmt(r)]]}; }
+  if (mode === "is"){
+    if (b === 0) return {error:"The second value cannot be zero."};
+    r = a / b * 100; return {big: fmt(r) + "%", rows:[["Result", fmt(r) + "%"]]};
+  }
+  if (mode === "change"){
+    if (a === 0) return {error:"The original value cannot be zero."};
+    r = (b - a) / Math.abs(a) * 100;
+    var word = r >= 0 ? "increase" : "decrease";
+    return {big: fmt(Math.abs(r)) + "% " + word,
+            rows:[["Change", fmt(Math.abs(r)) + "% " + word],["Difference", fmt(b - a)]]};
+  }
+  // reverse
+  var factor = dir === "down" ? (1 - a/100) : (1 + a/100);
+  if (factor === 0) return {error:"Invalid percentage for this direction."};
+  r = b / factor;
+  return {big: fmt(r), rows:[["Original value", fmt(r)],["Change amount", fmt(Math.abs(b - r))]]};
+}
+function fmt(n){
+  if (!isFinite(n)) return "—";
+  return (+n.toFixed(4)).toLocaleString("en-US");
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var modeEl = document.getElementById("pct-mode"),
+      aEl = document.getElementById("pct-a"), bEl = document.getElementById("pct-b"),
+      dirWrap = document.getElementById("pct-dir-wrap"), dirEl = document.getElementById("pct-dir"),
+      la = document.getElementById("pct-label-a"), lb = document.getElementById("pct-label-b"),
+      out = document.getElementById("pct-result");
+  var labels = {of:["Percentage (%)","Value"], is:["X","Y"],
+                change:["Original value","New value"], reverse:["Change (%)","Final value"]};
+  function refresh(){ var m = modeEl.value; la.textContent = labels[m][0]; lb.textContent = labels[m][1];
+    dirWrap.style.display = m === "reverse" ? "block" : "none"; }
+  modeEl.addEventListener("change", refresh); refresh();
+  document.getElementById("pct-go").addEventListener("click", function(){
+    var res = pctCalc(modeEl.value, aEl.value, bEl.value, dirEl.value);
+    if (res.error){ out.innerHTML = "<p>"+res.error+"</p>"; }
+    else {
+      var rows = res.rows.map(function(r){ return "<tr><td>"+r[0]+"</td><td>"+r[1]+"</td></tr>"; }).join("");
+      out.innerHTML = '<div class="big">'+res.big+'</div><table>'+rows+'</table>';
+    }
+    out.classList.add("show");
+  });
+});
+</script>
+</body>
+</html>

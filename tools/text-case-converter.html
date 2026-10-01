@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Text Case Converter — UPPERCASE, lowercase, Title Case</title>
+<meta name="description" content="Convert text between UPPERCASE, lowercase, Title Case, Sentence case and more instantly. Free online case converter.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Title Case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Capitalizing the first letter of each major word, e.g. \u201cThe Quick Brown Fox\u201d. Short words like \u201cand\u201d or \u201cthe\u201d usually stay lowercase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I fix text typed in all caps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the lowercase or sentence-case mode to normalize it in one click \u2014 much faster than retyping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Sentence case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only the first letter of each sentence is capitalized, like normal prose: \u201cThe quick brown fox jumps.\u201d"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a character limit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The converter handles anything from a single word to a full document, all in your browser."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Text Case Converter</h1>
+  <p class="tool-lead">Change text capitalization in one click — uppercase, lowercase, title case, sentence case and more.</p>
+  <div class="tool-box">
+<div class="field"><label for="cc-text">Your text</label>
+<textarea id="cc-text" rows="7" placeholder="Type or paste text here...">The Quick Brown Fox Jumps Over The Lazy Dog</textarea></div>
+<div class="check-row" style="gap:8px">
+  <button class="btn secondary" data-case="upper">UPPERCASE</button>
+  <button class="btn secondary" data-case="lower">lowercase</button>
+  <button class="btn secondary" data-case="title">Title Case</button>
+  <button class="btn secondary" data-case="sentence">Sentence case</button>
+  <button class="btn secondary" data-case="capitalized">Capitalized</button>
+  <button class="btn secondary" data-case="alternating">aLtErNaTiNg</button>
+  <button class="btn secondary" data-case="inverse">iNVERSE</button>
+</div>
+<div class="check-row" style="gap:8px">
+  <button class="btn" id="cc-copy">Copy result</button>
+  <button class="btn secondary" id="cc-clear">Clear</button>
+  <button class="btn secondary" id="cc-spaces">Remove extra spaces</button>
+</div>
+<div class="result show" id="cc-result"><p style="color:#6b7280">The converted text will appear here.</p></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>Text cases explained</h2>
+<p>Different contexts call for different capitalization. Uppercase shouts in headings and warnings but is hard to read in long passages. Lowercase suits code, URLs and stylized design. Title case — capitalizing the major words — is the standard for English headlines and book titles, while sentence case (capitalizing only the first word) matches normal prose and is common in user interfaces.</p>
+<p>Title case has a subtle rule worth knowing: short conjunctions, articles and prepositions (and, the, of, in, on) usually stay lowercase unless they are the first or last word. This converter applies that rule for common short words, which handles the vast majority of headlines correctly. Legal and academic styles have their own variations, so always check a style guide for formal work.</p>
+<p>The alternating case (“aLtErNaTiNg”) is a novelty style popular in memes and playful social posts — included here for fun rather than formal use. The inverse case flips every letter's capitalization, which is handy when you accidentally type with Caps Lock on. Extra-space cleanup collapses multiple spaces and trims lines, useful for pasted text.</p>
+<p>As with every TinyTools utility, conversion happens instantly in your browser. Paste text of any length, pick a case, and copy the result back — nothing is uploaded, stored or logged.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>What is Title Case?</summary><p>Capitalizing the first letter of each major word, e.g. “The Quick Brown Fox”. Short words like “and” or “the” usually stay lowercase.</p></details>
+<details><summary>How do I fix text typed in all caps?</summary><p>Use the lowercase or sentence-case mode to normalize it in one click — much faster than retyping.</p></details>
+<details><summary>What is Sentence case?</summary><p>Only the first letter of each sentence is capitalized, like normal prose: “The quick brown fox jumps.”</p></details>
+<details><summary>Is there a character limit?</summary><p>No. The converter handles anything from a single word to a full document, all in your browser.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function toCase(text, mode){
+  text = text || "";
+  var SMALL = {a:1,an:1,the:1,and:1,but:1,or:1,nor:1,for:1,so:1,yet:1,at:1,by:1,in:1,of:1,on:1,to:1,up:1,as:1};
+  function cap(w){ return w.charAt(0).toUpperCase() + w.slice(1); }
+  switch(mode){
+    case "upper": return text.toUpperCase();
+    case "lower": return text.toLowerCase();
+    case "title":
+      return text.toLowerCase().split(/(\s+)/).map(function(part, i, arr){
+        if (/^\s+$/.test(part) || part === "") return part;
+        var clean = part.replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, "");
+        var isFirst = arr.slice(0, i).join("").trim() === "";
+        var isLast = arr.slice(i+1).join("").trim() === "";
+        if (!isFirst && !isLast && SMALL[clean.toLowerCase()]) return part.toLowerCase();
+        return part.replace(/[a-zA-Z]+/, function(w){ return cap(w.toLowerCase()); });
+      }).join("");
+    case "sentence":
+      return text.toLowerCase().replace(/(^\s*[a-z])|([.!?]+\s+[a-z])/g, function(m){ return m.toUpperCase(); });
+    case "capitalized":
+      return text.toLowerCase().split(/(\s+)/).map(function(p){
+        return /^\s*$/.test(p) ? p : cap(p); }).join("");
+    case "alternating": {
+      var out = "", up = false;
+      for (var i = 0; i < text.length; i++){
+        var ch = text[i];
+        if (/[a-zA-Z]/.test(ch)){ out += up ? ch.toUpperCase() : ch.toLowerCase(); up = !up; }
+        else out += ch;
+      }
+      return out;
+    }
+    case "inverse": {
+      var r = "";
+      for (var j = 0; j < text.length; j++){
+        var c = text[j];
+        r += c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase();
+      }
+      return r;
+    }
+    case "spaces": return text.replace(/[ \t]+/g, " ").replace(/\n{3,}/g, "\n\n").trim();
+    default: return text;
+  }
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var ta = document.getElementById("cc-text"), out = document.getElementById("cc-result");
+  function show(t){
+    out.innerHTML = '<p style="white-space:pre-wrap;word-break:break-word">'+
+      t.replace(/&/g,"&amp;").replace(/</g,"&lt;")+'</p>';
+  }
+  document.querySelectorAll("[data-case]").forEach(function(b){
+    b.addEventListener("click", function(){ show(toCase(ta.value, b.getAttribute("data-case"))); });
+  });
+  document.getElementById("cc-spaces").addEventListener("click", function(){
+    ta.value = toCase(ta.value, "spaces"); show(ta.value);
+  });
+  document.getElementById("cc-clear").addEventListener("click", function(){ ta.value = ""; show(""); });
+  document.getElementById("cc-copy").addEventListener("click", function(){
+    var txt = out.textContent;
+    if (navigator.clipboard){ navigator.clipboard.writeText(txt); }
+    var b = document.getElementById("cc-copy"); b.textContent = "Copied!";
+    setTimeout(function(){ b.textContent = "Copy result"; }, 1500);
+  });
+  show(toCase(ta.value, "title"));
+});
+</script>
+</body>
+</html>

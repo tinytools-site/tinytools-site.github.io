@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Loan &amp; Mortgage Calculator — Monthly Payment &amp; Interest</title>
+<meta name="description" content="Calculate monthly loan payments, total interest and total cost for mortgages, car loans and personal loans. Free amortization calculator.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is the monthly loan payment calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With the amortization formula M = P\u00b7r(1+r)^n / ((1+r)^n \u2212 1), where P is principal, r the monthly rate and n the number of payments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a longer loan term save money?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It lowers the monthly payment but increases total interest significantly. A 30-year mortgage can cost more than double the interest of a 15-year one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between interest rate and APR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The interest rate is the cost of borrowing alone; APR includes most fees and points, making it better for comparing loan offers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are taxes and insurance included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This calculator covers principal and interest only. Mortgage payments in real life also include property tax, insurance and possibly PMI."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Loan / Mortgage Calculator</h1>
+  <p class="tool-lead">See your monthly payment, total interest and total cost for any fixed-rate loan — mortgage, car or personal.</p>
+  <div class="tool-box">
+<div class="field-row">
+  <div class="field"><label for="loan-p">Loan amount ($)</label>
+    <input type="number" id="loan-p" value="300000" min="1" step="any"></div>
+  <div class="field"><label for="loan-r">Annual interest rate (%)</label>
+    <input type="number" id="loan-r" value="6" min="0" step="any"></div>
+</div>
+<div class="field"><label for="loan-y">Term (years)</label>
+  <input type="number" id="loan-y" value="30" min="1" max="50" step="1"></div>
+<button class="btn" id="loan-go">Calculate</button>
+<div class="result" id="loan-result"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How loan payments are calculated</h2>
+<p>A fixed-rate loan is repaid in equal monthly instalments that cover both interest and part of the principal. The monthly payment is calculated with the amortization formula: M = P × r × (1 + r)^n ÷ ((1 + r)^n − 1), where P is the loan amount, r is the monthly interest rate (annual rate divided by 12) and n is the total number of payments. Early payments are mostly interest; later payments are mostly principal.</p>
+<p>The total interest you pay depends on three things: how much you borrow, the interest rate, and the term length. A longer term lowers the monthly payment but raises the total interest substantially. For example, borrowing $300,000 at 6% over 30 years costs about $348,000 in interest alone, while the same loan over 15 years costs about $152,000 in interest — less than half, in exchange for a higher monthly payment.</p>
+<p>When comparing loans, look beyond the headline rate. Fees, points paid upfront to lower the rate, and whether the rate is truly fixed all change the real cost. The APR (annual percentage rate) bundles most fees into a single number and is usually a better comparison tool than the nominal rate. Also check for prepayment penalties if you plan to pay the loan off early.</p>
+<p>This calculator assumes a fixed interest rate, monthly compounding and no extra fees, taxes or insurance — the standard baseline for comparing loan offers. For a mortgage, remember that your actual monthly housing payment will also include property tax, homeowner's insurance and possibly PMI, which this tool does not estimate.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How is the monthly loan payment calculated?</summary><p>With the amortization formula M = P·r(1+r)^n / ((1+r)^n − 1), where P is principal, r the monthly rate and n the number of payments.</p></details>
+<details><summary>Does a longer loan term save money?</summary><p>It lowers the monthly payment but increases total interest significantly. A 30-year mortgage can cost more than double the interest of a 15-year one.</p></details>
+<details><summary>What is the difference between interest rate and APR?</summary><p>The interest rate is the cost of borrowing alone; APR includes most fees and points, making it better for comparing loan offers.</p></details>
+<details><summary>Are taxes and insurance included?</summary><p>No. This calculator covers principal and interest only. Mortgage payments in real life also include property tax, insurance and possibly PMI.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function calcLoan(P, annualRate, years){
+  P = parseFloat(P); annualRate = parseFloat(annualRate); years = parseFloat(years);
+  if (isNaN(P) || isNaN(annualRate) || isNaN(years) || P <= 0 || years <= 0 || annualRate < 0)
+    return {error:"Please enter valid loan details."};
+  var n = Math.round(years * 12), r = annualRate / 100 / 12, M;
+  if (r === 0){ M = P / n; }
+  else { var f = Math.pow(1 + r, n); M = P * r * f / (f - 1); }
+  var total = M * n, interest = total - P;
+  function money(x){ return "$" + (+x.toFixed(2)).toLocaleString("en-US"); }
+  return {monthly:money(M), total:money(total), interest:money(interest), payments:n};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var out = document.getElementById("loan-result");
+  document.getElementById("loan-go").addEventListener("click", function(){
+    var r = calcLoan(document.getElementById("loan-p").value,
+                     document.getElementById("loan-r").value,
+                     document.getElementById("loan-y").value);
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; }
+    else {
+      out.innerHTML = '<div class="big">'+r.monthly+' / month</div><table>' +
+        '<tr><td>Number of payments</td><td>'+r.payments+'</td></tr>' +
+        '<tr><td>Total interest</td><td>'+r.interest+'</td></tr>' +
+        '<tr><td>Total cost</td><td>'+r.total+'</td></tr></table>' +
+        '<p style="font-size:.85rem;color:#6b7280;margin-top:8px">Principal &amp; interest only. Excludes tax, insurance and fees.</p>';
+    }
+    out.classList.add("show");
+  });
+});
+</script>
+</body>
+</html>

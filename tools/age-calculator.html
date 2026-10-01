@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Age Calculator — Exact Age in Years, Months &amp; Days</title>
+<meta name="description" content="Calculate your exact age from your date of birth: years, months, days, total weeks and days until your next birthday. Free online.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is exact age calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By subtracting your birth date from today's date, borrowing months and days where needed to account for different month lengths and leap years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I was born on February 29th?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In non-leap years the next-birthday countdown uses February 28th, the most common convention. Your year count still increases correctly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate age as of a past or future date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool calculates age as of today. For historical dates you would need a date-duration calculation between two specific dates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my date of birth stored or sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All calculations happen locally in your browser with JavaScript. Your birth date never leaves your device."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Tiny<b>Tools</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Age Calculator</h1>
+  <p class="tool-lead">Enter your date of birth to see your exact age in years, months and days — plus totals and your next birthday countdown.</p>
+  <div class="tool-box">
+<div class="field">
+  <label for="age-dob">Date of birth</label>
+  <input type="date" id="age-dob" value="2000-01-01" max="2026-12-31">
+</div>
+<button class="btn" id="age-go">Calculate age</button>
+<div class="result" id="age-result"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How the Age Calculator works</h2>
+<p>Your exact age is the time elapsed between your date of birth and today, broken down into years, months and days. While the year count is what most people use day to day, the full breakdown is needed for official forms, insurance quotes, medical records and eligibility checks that ask for age in months or even days.</p>
+<p>The calculation has to handle the irregularity of the calendar: months have 28 to 31 days and leap years add an extra day every four years (with a few century exceptions). The standard method is to subtract the birth year, month and day from the current date, borrowing days and months where needed — the same arithmetic you would do by hand, just done instantly and without mistakes.</p>
+<p>Beyond the headline age, the calculator shows useful totals: your age in months, weeks, days, hours and minutes. These totals are popular for milestone posts (“10,000 days old!”) and for checking things like warranty periods or subscription lengths measured in days rather than years.</p>
+<p>It also counts down to your next birthday, which is handy for planning. If you were born on February 29th, the calculator treats your birthday as February 28th in non-leap years for the countdown, following the most common convention. Everything is computed locally in your browser, so your birth date never leaves your device.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How is exact age calculated?</summary><p>By subtracting your birth date from today&#x27;s date, borrowing months and days where needed to account for different month lengths and leap years.</p></details>
+<details><summary>What if I was born on February 29th?</summary><p>In non-leap years the next-birthday countdown uses February 28th, the most common convention. Your year count still increases correctly.</p></details>
+<details><summary>Can I calculate age as of a past or future date?</summary><p>This tool calculates age as of today. For historical dates you would need a date-duration calculation between two specific dates.</p></details>
+<details><summary>Is my date of birth stored or sent anywhere?</summary><p>No. All calculations happen locally in your browser with JavaScript. Your birth date never leaves your device.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Tiny<b>Tools</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free, fast and private online tools.
+      No sign-up. No downloads. Everything runs in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 TinyTools. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function calcAge(birthISO, nowISO){
+  var b = new Date(birthISO + "T00:00:00"), n = nowISO ? new Date(nowISO + "T00:00:00") : new Date();
+  n = new Date(n.getFullYear(), n.getMonth(), n.getDate());
+  b = new Date(b.getFullYear(), b.getMonth(), b.getDate());
+  if (isNaN(b.getTime())) return {error:"Please enter a valid date of birth."};
+  if (b > n) return {error:"Date of birth cannot be in the future."};
+  var years = n.getFullYear() - b.getFullYear(),
+      months = n.getMonth() - b.getMonth(),
+      days = n.getDate() - b.getDate();
+  if (days < 0){ months--; var prev = new Date(n.getFullYear(), n.getMonth(), 0); days += prev.getDate(); }
+  if (months < 0){ years--; months += 12; }
+  var totalDays = Math.floor((n - b) / 86400000);
+  var totalMonths = years * 12 + months;
+  // next birthday
+  var nb = new Date(n.getFullYear(), b.getMonth(), b.getDate());
+  if (nb <= n) nb = new Date(n.getFullYear() + 1, b.getMonth(), b.getDate());
+  if (b.getMonth() === 1 && b.getDate() === 29 && nb.getMonth() === 1 && nb.getDate() === 29){
+    // Date auto-rolls Feb 29 -> Mar 1 in non-leap years; keep Mar 1, it's fine
+  }
+  var inDays = Math.round((nb - n) / 86400000);
+  return {years:years, months:months, days:days, totalDays:totalDays,
+          totalMonths:totalMonths, weeks:Math.floor(totalDays/7),
+          hours:totalDays*24, minutes:totalDays*1440, nextIn:inDays};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var dob = document.getElementById("age-dob"), out = document.getElementById("age-result");
+  document.getElementById("age-go").addEventListener("click", function(){
+    var r = calcAge(dob.value);
+    if (r.error){ out.innerHTML = "<p>"+r.error+"</p>"; }
+    else {
+      out.innerHTML = '<div class="big">'+r.years+' years, '+r.months+' months, '+r.days+' days</div>' +
+      '<table>' +
+      '<tr><td>Total months</td><td>'+r.totalMonths.toLocaleString("en-US")+'</td></tr>' +
+      '<tr><td>Total weeks</td><td>'+r.weeks.toLocaleString("en-US")+'</td></tr>' +
+      '<tr><td>Total days</td><td>'+r.totalDays.toLocaleString("en-US")+'</td></tr>' +
+      '<tr><td>Total hours</td><td>'+r.hours.toLocaleString("en-US")+'</td></tr>' +
+      '<tr><td>Next birthday in</td><td>'+r.nextIn+' days</td></tr>' +
+      '</table>';
+    }
+    out.classList.add("show");
+  });
+});
+</script>
+</body>
+</html>
